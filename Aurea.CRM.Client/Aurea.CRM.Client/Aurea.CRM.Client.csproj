@@ -16,4 +16,9 @@
   <ItemGroup>
     <Folder Include="Views\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Aurea.CRM.Core\Aurea.CRM.Core.csproj" />
+    <ProjectReference Include="..\Shared\Aurea.CRM.Services\Aurea.CRM.Services.csproj" />
+  </ItemGroup>
 </Project>

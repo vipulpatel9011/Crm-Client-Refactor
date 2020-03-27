@@ -532,7 +532,13 @@
     <Color x:Key="XfListMainFontColor">Black</Color>
     <Color x:Key="XfListBackgroundColor">#88ffffff</Color>
 
-    <OnPlatform x:Key="XfLoginBackground" x:TypeArguments="FileImageSource">
+    <!--<OnPlatform x:Key="XfLoginBackground" x:TypeArguments="FileImageSource">
+        <On Platform="Android">login_background.png</On>
+        <On Platform="iOS">login_background.png</On>
+        <On Platform="UWP">Assets/login_background.png</On>
+    </OnPlatform>-->
+
+    <OnPlatform x:Key="XfLoginBackground" x:TypeArguments="x:String">
         <On Platform="Android">login_background.png</On>
         <On Platform="iOS">login_background.png</On>
         <On Platform="UWP">Assets/login_background.png</On>

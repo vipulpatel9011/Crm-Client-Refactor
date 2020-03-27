@@ -1,0 +1,866 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="basic_109" xml:space="preserve">
+    <value>Passwortwechsel</value>
+  </data>
+  <data name="basic_1091" xml:space="preserve">
+    <value>Passwortwechsel</value>
+  </data>
+  <data name="basic_110" xml:space="preserve">
+    <value>Passwort nicht geändert</value>
+  </data>
+  <data name="basic_1101" xml:space="preserve">
+    <value>Passwort nicht geändert</value>
+  </data>
+  <data name="basic_111" xml:space="preserve">
+    <value>Passwort geändert</value>
+  </data>
+  <data name="basic_1111" xml:space="preserve">
+    <value>Passwort geändert</value>
+  </data>
+  <data name="basic_15" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="basic_151" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="basic_16" xml:space="preserve">
+    <value>Offline</value>
+  </data>
+  <data name="basic_161" xml:space="preserve">
+    <value>Offline</value>
+  </data>
+  <data name="basic_171" xml:space="preserve">
+    <value>Sie können die Datei in Ihre Dokumentenablage aufnehmen, um sie später hochzuladen.</value>
+  </data>
+  <data name="basic_1711" xml:space="preserve">
+    <value>Sie können die Datei in Ihre Dokumentenablage aufnehmen, um sie später hochzuladen.</value>
+  </data>
+  <data name="basic_172" xml:space="preserve">
+    <value>Datei hinzufügen</value>
+  </data>
+  <data name="basic_1721" xml:space="preserve">
+    <value>Datei hinzufügen</value>
+  </data>
+  <data name="basic_173" xml:space="preserve">
+    <value>Datei zur Dokumentenablage hinzufügen</value>
+  </data>
+  <data name="basic_1731" xml:space="preserve">
+    <value>Datei zur Dokumentenablage hinzufügen</value>
+  </data>
+  <data name="basic_174" xml:space="preserve">
+    <value>Foto hinzufügen</value>
+  </data>
+  <data name="basic_1741" xml:space="preserve">
+    <value>Foto hinzufügen</value>
+  </data>
+  <data name="basic_22" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="basic_221" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="basic_25" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="basic_251" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="basic_27" xml:space="preserve">
+    <value>Versand von Email nicht möglich</value>
+  </data>
+  <data name="basic_271" xml:space="preserve">
+    <value>Versand von Email nicht möglich</value>
+  </data>
+  <data name="basic_28" xml:space="preserve">
+    <value>Sie müssen zuerst ein Email-Konto auf Ihrem iPad einrichten</value>
+  </data>
+  <data name="basic_281" xml:space="preserve">
+    <value>Sie müssen zuerst ein Email-Konto auf Ihrem iPad einrichten</value>
+  </data>
+  <data name="basic_36" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="basic_361" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="basic_42" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="basic_421" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="basic_7" xml:space="preserve">
+    <value>Sync Datenmodell &amp; Konfiguration</value>
+  </data>
+  <data name="basic_71" xml:space="preserve">
+    <value>Sync Datenmodell &amp; Konfiguration</value>
+  </data>
+  <data name="basic_99" xml:space="preserve">
+    <value>Alle wiederholen</value>
+  </data>
+  <data name="basic_991" xml:space="preserve">
+    <value>Alle wiederholen</value>
+  </data>
+  <data name="client_ui_text_20" xml:space="preserve">
+    <value>Ausgewählte bearbeiten</value>
+  </data>
+  <data name="client_ui_text_201" xml:space="preserve">
+    <value>Ausgewählte bearbeiten</value>
+  </data>
+  <data name="client_ui_text_21" xml:space="preserve">
+    <value>Ausgewählte löschen</value>
+  </data>
+  <data name="client_ui_text_211" xml:space="preserve">
+    <value>Ausgewählte löschen</value>
+  </data>
+  <data name="client_ui_text_22" xml:space="preserve">
+    <value>Alle verwerfen</value>
+  </data>
+  <data name="client_ui_text_221" xml:space="preserve">
+    <value>Alle verwerfen</value>
+  </data>
+  <data name="ConnectionRestored" xml:space="preserve">
+    <value>Internetverbindung wiederhergestellt</value>
+  </data>
+  <data name="ConnectionRestored1" xml:space="preserve">
+    <value>Internetverbindung wiederhergestellt</value>
+  </data>
+  <data name="DashboardTitle" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="DashboardTitle1" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="DetailViewMakePhoneCall" xml:space="preserve">
+    <value>Anrufen</value>
+  </data>
+  <data name="DetailViewMakePhoneCall1" xml:space="preserve">
+    <value>Anrufen</value>
+  </data>
+  <data name="DetailViewMPhoneCallNotSupported" xml:space="preserve">
+    <value>Keine Anwendung registriert, um einen Telefonanruf zu tätigen</value>
+  </data>
+  <data name="DetailViewMPhoneCallNotSupported1" xml:space="preserve">
+    <value>Keine Anwendung registriert, um einen Telefonanruf zu tätigen</value>
+  </data>
+  <data name="ErrorGeneralServerErrror" xml:space="preserve">
+    <value>The action could not be completed because it was rejected by the server.</value>
+  </data>
+  <data name="ErrorGeneralServerErrror1" xml:space="preserve">
+    <value>The action could not be completed because it was rejected by the server.</value>
+  </data>
+  <data name="ErrorSynchronizationErrors" xml:space="preserve">
+    <value>Synchronisierungsfehler</value>
+  </data>
+  <data name="ErrorSynchronizationErrors1" xml:space="preserve">
+    <value>Synchronisierungsfehler</value>
+  </data>
+  <data name="errors_16" xml:space="preserve">
+    <value>CRMpad ist abgestürzt. Wollen Sie einen Absturz Report an Aurea Software senden?</value>
+  </data>
+  <data name="errors_161" xml:space="preserve">
+    <value>CRMpad ist abgestürzt. Wollen Sie einen Absturz Report an Aurea Software senden?</value>
+  </data>
+  <data name="errors_36" xml:space="preserve">
+    <value>Dokumentenablage nicht konfiguriert</value>
+  </data>
+  <data name="errors_361" xml:space="preserve">
+    <value>Dokumentenablage nicht konfiguriert</value>
+  </data>
+  <data name="errors_37" xml:space="preserve">
+    <value>Dieser Dateityp kann nicht zur Dokumentenablage hinzugefügt werden</value>
+  </data>
+  <data name="errors_371" xml:space="preserve">
+    <value>Dieser Dateityp kann nicht zur Dokumentenablage hinzugefügt werden</value>
+  </data>
+  <data name="errors_38" xml:space="preserve">
+    <value>Die Datei ist zu groß für die Dokumentenablage.</value>
+  </data>
+  <data name="errors_381" xml:space="preserve">
+    <value>Die Datei ist zu groß für die Dokumentenablage.</value>
+  </data>
+  <data name="errors_41" xml:space="preserve">
+    <value>Update for field(s) %@ denied due to access rights</value>
+  </data>
+  <data name="errors_411" xml:space="preserve">
+    <value>Update for field(s) %@ denied due to access rights</value>
+  </data>
+  <data name="errors_596" xml:space="preserve">
+    <value>CRM.Client Fensterbreite &lt;320 Pixel wird nicht unterstützt</value>
+  </data>
+  <data name="errors_5961" xml:space="preserve">
+    <value>CRM.Client Fensterbreite &lt;320 Pixel wird nicht unterstützt</value>
+  </data>
+  <data name="errors_597" xml:space="preserve">
+    <value>CRM.Client Fenster Höhe &lt;500 Pixel wird nicht unterstützt</value>
+  </data>
+  <data name="errors_5971" xml:space="preserve">
+    <value>CRM.Client Fenster Höhe &lt;500 Pixel wird nicht unterstützt</value>
+  </data>
+  <data name="errors_598" xml:space="preserve">
+    <value>Die minimal unterstützte Geräteauflösung beträgt iOS 320 × 568 Punkte (1136 x 640 Bildschirmpixel). In beiden Dimensionen werden weniger Auflösungen unterstützt.
+Sie können zu einer anderen Anwendung wechseln oder die Anwendung manuell schließen.</value>
+  </data>
+  <data name="errors_5981" xml:space="preserve">
+    <value>Die minimal unterstützte Geräteauflösung beträgt iOS 320 × 568 Punkte (1136 x 640 Bildschirmpixel). In beiden Dimensionen werden weniger Auflösungen unterstützt.
+Sie können zu einer anderen Anwendung wechseln oder die Anwendung manuell schließen.</value>
+  </data>
+  <data name="ErrorTimeout" xml:space="preserve">
+    <value>Keine Server-Antwort (timeout)</value>
+  </data>
+  <data name="ErrorTimeout1" xml:space="preserve">
+    <value>Keine Server-Antwort (timeout)</value>
+  </data>
+  <data name="ExitText" xml:space="preserve">
+    <value>AUSFAHRT</value>
+  </data>
+  <data name="ExitText1" xml:space="preserve">
+    <value>AUSFAHRT</value>
+  </data>
+  <data name="LoadingText" xml:space="preserve">
+    <value>Bitte warten...</value>
+  </data>
+  <data name="LoadingText1" xml:space="preserve">
+    <value>Bitte warten...</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Aurea CRM</value>
+  </data>
+  <data name="LoginTitle1" xml:space="preserve">
+    <value>Aurea CRM</value>
+  </data>
+  <data name="Login_1" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="Login_10" xml:space="preserve">
+    <value>Keine Verbindung zum Internet vorhanden. Bitte prüfen Sie Ihre Internetverbindung.</value>
+  </data>
+  <data name="Login_1001" xml:space="preserve">
+    <value>Willkommen!</value>
+  </data>
+  <data name="Login_10011" xml:space="preserve">
+    <value>Willkommen!</value>
+  </data>
+  <data name="Login_1002" xml:space="preserve">
+    <value>Willkommen %@!</value>
+  </data>
+  <data name="Login_10021" xml:space="preserve">
+    <value>Willkommen %@!</value>
+  </data>
+  <data name="Login_1003" xml:space="preserve">
+    <value>Wählen Sie bitte Ihre Sprache</value>
+  </data>
+  <data name="Login_10031" xml:space="preserve">
+    <value>Wählen Sie bitte Ihre Sprache</value>
+  </data>
+  <data name="Login_1004" xml:space="preserve">
+    <value>Sprache übernehmen</value>
+  </data>
+  <data name="Login_10041" xml:space="preserve">
+    <value>Sprache übernehmen</value>
+  </data>
+  <data name="Login_101" xml:space="preserve">
+    <value>Keine Verbindung zum Internet vorhanden. Bitte prüfen Sie Ihre Internetverbindung.</value>
+  </data>
+  <data name="Login_11" xml:space="preserve">
+    <value>Offline Login rejected for this environment. Please Check your internet connection and login in online mode.</value>
+  </data>
+  <data name="Login_110" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="Login_1100" xml:space="preserve">
+    <value>Weitere Informationen</value>
+  </data>
+  <data name="Login_11001" xml:space="preserve">
+    <value>Weitere Informationen</value>
+  </data>
+  <data name="Login_1101" xml:space="preserve">
+    <value>Mehr über Aurea CRM</value>
+  </data>
+  <data name="Login_11011" xml:space="preserve">
+    <value>Mehr über Aurea CRM</value>
+  </data>
+  <data name="Login_1102" xml:space="preserve">
+    <value>Demozugang anfordern</value>
+  </data>
+  <data name="Login_11021" xml:space="preserve">
+    <value>Demozugang anfordern</value>
+  </data>
+  <data name="Login_1103" xml:space="preserve">
+    <value>Vorschau &amp; Anleitung</value>
+  </data>
+  <data name="Login_11031" xml:space="preserve">
+    <value>Vorschau &amp; Anleitung</value>
+  </data>
+  <data name="Login_1104" xml:space="preserve">
+    <value>update Blog</value>
+  </data>
+  <data name="Login_11041" xml:space="preserve">
+    <value>update Blog</value>
+  </data>
+  <data name="Login_1105" xml:space="preserve">
+    <value>update CRM auf Twitter</value>
+  </data>
+  <data name="Login_11051" xml:space="preserve">
+    <value>update CRM auf Twitter</value>
+  </data>
+  <data name="Login_1106" xml:space="preserve">
+    <value>update CRM auf Facebook</value>
+  </data>
+  <data name="Login_11061" xml:space="preserve">
+    <value>update CRM auf Facebook</value>
+  </data>
+  <data name="Login_1107" xml:space="preserve">
+    <value>Über Aurea</value>
+  </data>
+  <data name="Login_11071" xml:space="preserve">
+    <value>Über Aurea</value>
+  </data>
+  <data name="Login_1108" xml:space="preserve">
+    <value>http://go.aurea.com/contact-us</value>
+  </data>
+  <data name="Login_11081" xml:space="preserve">
+    <value>http://go.aurea.com/contact-us</value>
+  </data>
+  <data name="Login_1109" xml:space="preserve">
+    <value>http://www.aurea.com/about-aurea/vision</value>
+  </data>
+  <data name="Login_11091" xml:space="preserve">
+    <value>http://www.aurea.com/about-aurea/vision</value>
+  </data>
+  <data name="Login_111" xml:space="preserve">
+    <value>Offline Login rejected for this environment. Please Check your internet connection and login in online mode.</value>
+  </data>
+  <data name="Login_1110" xml:space="preserve">
+    <value>http://www.aurea.com/products/crm</value>
+  </data>
+  <data name="Login_11101" xml:space="preserve">
+    <value>http://www.aurea.com/products/crm</value>
+  </data>
+  <data name="Login_1111" xml:space="preserve">
+    <value>http://go.aurea.com/crmpad-demo</value>
+  </data>
+  <data name="Login_11111" xml:space="preserve">
+    <value>http://go.aurea.com/crmpad-demo</value>
+  </data>
+  <data name="Login_1112" xml:space="preserve">
+    <value>http://twitter.com/updateCRM</value>
+  </data>
+  <data name="Login_11121" xml:space="preserve">
+    <value>http://twitter.com/updateCRM</value>
+  </data>
+  <data name="Login_1113" xml:space="preserve">
+    <value>http://www.facebook.com/updateCRM</value>
+  </data>
+  <data name="Login_11131" xml:space="preserve">
+    <value>http://www.facebook.com/updateCRM</value>
+  </data>
+  <data name="Login_12" xml:space="preserve">
+    <value>Benutzername oder Passwort ungültig. Bitte prüfen Sie Ihre Eingaben und versuchen es erneut.</value>
+  </data>
+  <data name="Login_1201" xml:space="preserve">
+    <value>Offline Anmeldung</value>
+  </data>
+  <data name="Login_12011" xml:space="preserve">
+    <value>Offline Anmeldung</value>
+  </data>
+  <data name="Login_1202" xml:space="preserve">
+    <value>Protokoll anzeigen</value>
+  </data>
+  <data name="Login_12021" xml:space="preserve">
+    <value>Protokoll anzeigen</value>
+  </data>
+  <data name="Login_1203" xml:space="preserve">
+    <value>Kennwort ändern</value>
+  </data>
+  <data name="Login_12031" xml:space="preserve">
+    <value>Kennwort ändern</value>
+  </data>
+  <data name="Login_1204" xml:space="preserve">
+    <value>Ausgang</value>
+  </data>
+  <data name="Login_12041" xml:space="preserve">
+    <value>Ausgang</value>
+  </data>
+  <data name="Login_121" xml:space="preserve">
+    <value>Benutzername oder Passwort ungültig. Bitte prüfen Sie Ihre Eingaben und versuchen es erneut.</value>
+  </data>
+  <data name="Login_13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Login_1301" xml:space="preserve">
+    <value>Industrie</value>
+  </data>
+  <data name="Login_13011" xml:space="preserve">
+    <value>Industrie</value>
+  </data>
+  <data name="Login_1302" xml:space="preserve">
+    <value>Life Sciences</value>
+  </data>
+  <data name="Login_13021" xml:space="preserve">
+    <value>Life Sciences</value>
+  </data>
+  <data name="Login_1303" xml:space="preserve">
+    <value>Finanzdienstleister</value>
+  </data>
+  <data name="Login_13031" xml:space="preserve">
+    <value>Finanzdienstleister</value>
+  </data>
+  <data name="Login_1304" xml:space="preserve">
+    <value>Konsumgüter</value>
+  </data>
+  <data name="Login_13041" xml:space="preserve">
+    <value>Konsumgüter</value>
+  </data>
+  <data name="Login_1305" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Login_13051" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Login_1306" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Login_13061" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Login_1307" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Login_13071" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Login_1308" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Login_13081" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Login_131" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Login_14" xml:space="preserve">
+    <value>Ein allgemeiner Fehler ist aufgetreten. Bitte versuchen Sie es erneut.</value>
+  </data>
+  <data name="Login_141" xml:space="preserve">
+    <value>Ein allgemeiner Fehler ist aufgetreten. Bitte versuchen Sie es erneut.</value>
+  </data>
+  <data name="Login_15" xml:space="preserve">
+    <value>Keine Internetverbindung verfügbar</value>
+  </data>
+  <data name="Login_151" xml:space="preserve">
+    <value>Keine Internetverbindung verfügbar</value>
+  </data>
+  <data name="Login_16" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="Login_161" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="Login_17" xml:space="preserve">
+    <value>Anmeldung fehlgeschlagen</value>
+  </data>
+  <data name="Login_171" xml:space="preserve">
+    <value>Anmeldung fehlgeschlagen</value>
+  </data>
+  <data name="Login_18" xml:space="preserve">
+    <value>Anmeldung nicht möglich</value>
+  </data>
+  <data name="Login_181" xml:space="preserve">
+    <value>Anmeldung nicht möglich</value>
+  </data>
+  <data name="Login_19" xml:space="preserve">
+    <value>Synchronisation fehlgeschlagen</value>
+  </data>
+  <data name="Login_191" xml:space="preserve">
+    <value>Synchronisation fehlgeschlagen</value>
+  </data>
+  <data name="Login_2" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="Login_20" xml:space="preserve">
+    <value>Während der Synchronisation ist ein unerwarteter Fehler aufgetreten. Bitte versuchen Sie es erneut.</value>
+  </data>
+  <data name="Login_201" xml:space="preserve">
+    <value>Während der Synchronisation ist ein unerwarteter Fehler aufgetreten. Bitte versuchen Sie es erneut.</value>
+  </data>
+  <data name="Login_21" xml:space="preserve">
+    <value>Sie verfügen über keine gültige Lizenz für update Mobile Services. Bitte kontaktieren Sie Ihren Administrator.</value>
+  </data>
+  <data name="Login_210" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="Login_211" xml:space="preserve">
+    <value>Sie verfügen über keine gültige Lizenz für update Mobile Services. Bitte kontaktieren Sie Ihren Administrator.</value>
+  </data>
+  <data name="Login_22" xml:space="preserve">
+    <value>Ungültige Version</value>
+  </data>
+  <data name="Login_221" xml:space="preserve">
+    <value>Ungültige Version</value>
+  </data>
+  <data name="Login_23" xml:space="preserve">
+    <value>Ihre CRMpad Version wird vom Server nicht mehr unterstützt.</value>
+  </data>
+  <data name="Login_231" xml:space="preserve">
+    <value>Ihre CRMpad Version wird vom Server nicht mehr unterstützt.</value>
+  </data>
+  <data name="Login_24" xml:space="preserve">
+    <value>Ihre CRMpad Version wird vom Server nicht mehr unterstützt. Bitte installieren Sie die aktuellste Version.</value>
+  </data>
+  <data name="Login_241" xml:space="preserve">
+    <value>Ihre CRMpad Version wird vom Server nicht mehr unterstützt. Bitte installieren Sie die aktuellste Version.</value>
+  </data>
+  <data name="Login_25" xml:space="preserve">
+    <value>Aktuelle Version</value>
+  </data>
+  <data name="Login_251" xml:space="preserve">
+    <value>Aktuelle Version</value>
+  </data>
+  <data name="Login_26" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="Login_261" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="Login_27" xml:space="preserve">
+    <value>Neues Passwort</value>
+  </data>
+  <data name="Login_271" xml:space="preserve">
+    <value>Neues Passwort</value>
+  </data>
+  <data name="Login_28" xml:space="preserve">
+    <value>Passwort bestätigen</value>
+  </data>
+  <data name="Login_281" xml:space="preserve">
+    <value>Passwort bestätigen</value>
+  </data>
+  <data name="Login_29" xml:space="preserve">
+    <value>Neues Passwort und die Bestätigung stimmen nicht überein.</value>
+  </data>
+  <data name="Login_291" xml:space="preserve">
+    <value>Neues Passwort und die Bestätigung stimmen nicht überein.</value>
+  </data>
+  <data name="Login_3" xml:space="preserve">
+    <value>Kein Server ausgewählt</value>
+  </data>
+  <data name="Login_30" xml:space="preserve">
+    <value>Ihr Passwort ist abgelaufen und muss geändert werden.</value>
+  </data>
+  <data name="Login_301" xml:space="preserve">
+    <value>Ihr Passwort ist abgelaufen und muss geändert werden.</value>
+  </data>
+  <data name="Login_31" xml:space="preserve">
+    <value>Server hat keine Sprachen zurück geliefert.</value>
+  </data>
+  <data name="Login_311" xml:space="preserve">
+    <value>Server hat keine Sprachen zurück geliefert.</value>
+  </data>
+  <data name="Login_32" xml:space="preserve">
+    <value>Anmelden</value>
+  </data>
+  <data name="Login_321" xml:space="preserve">
+    <value>Anmelden</value>
+  </data>
+  <data name="Login_33" xml:space="preserve">
+    <value>Die Synchronisierung wurde abgebrochen</value>
+  </data>
+  <data name="Login_331" xml:space="preserve">
+    <value>Die Synchronisierung wurde abgebrochen</value>
+  </data>
+  <data name="Login_34" xml:space="preserve">
+    <value>Aktueller Benutzer ist mit einer anderen Registrierungs-URL angemeldet. Schließen Sie CRM.Client, bevor Sie eine andere Registrierungs-URL registrieren</value>
+  </data>
+  <data name="Login_341" xml:space="preserve">
+    <value>Aktueller Benutzer ist mit einer anderen Registrierungs-URL angemeldet. Schließen Sie CRM.Client, bevor Sie eine andere Registrierungs-URL registrieren</value>
+  </data>
+  <data name="Login_35" xml:space="preserve">
+    <value>Der aktuelle Server ist bereits registriert. Entfernen Sie die Serverregistrierung, bevor Sie sie erneut registrieren</value>
+  </data>
+  <data name="Login_351" xml:space="preserve">
+    <value>Der aktuelle Server ist bereits registriert. Entfernen Sie die Serverregistrierung, bevor Sie sie erneut registrieren</value>
+  </data>
+  <data name="Login_36" xml:space="preserve">
+    <value>Die aktuelle Server-URL ist bereits registriert. Entfernen Sie die Serverregistrierung, bevor Sie die neue Server-URL registrieren</value>
+  </data>
+  <data name="Login_361" xml:space="preserve">
+    <value>Die aktuelle Server-URL ist bereits registriert. Entfernen Sie die Serverregistrierung, bevor Sie die neue Server-URL registrieren</value>
+  </data>
+  <data name="Login_37" xml:space="preserve">
+    <value>Nur der Standardserver ist zulässig</value>
+  </data>
+  <data name="Login_371" xml:space="preserve">
+    <value>Nur der Standardserver ist zulässig</value>
+  </data>
+  <data name="Login_38" xml:space="preserve">
+    <value>Bitte wählen Sie den Standardserver aus der Liste der Server</value>
+  </data>
+  <data name="Login_381" xml:space="preserve">
+    <value>Bitte wählen Sie den Standardserver aus der Liste der Server</value>
+  </data>
+  <data name="Login_39" xml:space="preserve">
+    <value>Kein Server ausgewählt</value>
+  </data>
+  <data name="Login_4" xml:space="preserve">
+    <value>Anmeldung wird durchgeführt...</value>
+  </data>
+  <data name="Login_41" xml:space="preserve">
+    <value>Anmeldung wird durchgeführt...</value>
+  </data>
+  <data name="Login_5" xml:space="preserve">
+    <value>Anmeldung wird durchgeführt...</value>
+  </data>
+  <data name="Login_51" xml:space="preserve">
+    <value>Anmeldung wird durchgeführt...</value>
+  </data>
+  <data name="Login_6" xml:space="preserve">
+    <value>Synchronisation wird durchgeführt...</value>
+  </data>
+  <data name="Login_61" xml:space="preserve">
+    <value>Synchronisation wird durchgeführt...</value>
+  </data>
+  <data name="Login_7" xml:space="preserve">
+    <value>Das eingegebene Passwort ist nicht korrekt.</value>
+  </data>
+  <data name="Login_71" xml:space="preserve">
+    <value>Das eingegebene Passwort ist nicht korrekt.</value>
+  </data>
+  <data name="Login_8" xml:space="preserve">
+    <value>Es wurden noch keine Daten für diesen Benutzer synchronisiert. Bitte prüfen Sie Internetverbindung &amp; Benutzernamen.</value>
+  </data>
+  <data name="Login_81" xml:space="preserve">
+    <value>Es wurden noch keine Daten für diesen Benutzer synchronisiert. Bitte prüfen Sie Internetverbindung &amp; Benutzernamen.</value>
+  </data>
+  <data name="Login_9" xml:space="preserve">
+    <value>Die lokal gespeicherten Daten sind veraltet. Bitte prüfen Sie Ihre Internetverbindung um einen Full Sync durchzuführen.</value>
+  </data>
+  <data name="Login_91" xml:space="preserve">
+    <value>Die lokal gespeicherten Daten sind veraltet. Bitte prüfen Sie Ihre Internetverbindung um einen Full Sync durchzuführen.</value>
+  </data>
+  <data name="NoDataToDisplay" xml:space="preserve">
+    <value>Für diese Ansicht sind keine Daten verfügbar</value>
+  </data>
+  <data name="NoDataToDisplay1" xml:space="preserve">
+    <value>Für diese Ansicht sind keine Daten verfügbar</value>
+  </data>
+  <data name="processes_19" xml:space="preserve">
+    <value>Dokument versenden</value>
+  </data>
+  <data name="processes_191" xml:space="preserve">
+    <value>Dokument versenden</value>
+  </data>
+  <data name="processes_5" xml:space="preserve">
+    <value>Absturz</value>
+  </data>
+  <data name="processes_51" xml:space="preserve">
+    <value>Absturz</value>
+  </data>
+  <data name="processes_58" xml:space="preserve">
+    <value>Fertig</value>
+  </data>
+  <data name="processes_581" xml:space="preserve">
+    <value>Fertig</value>
+  </data>
+  <data name="ResetLogFile" xml:space="preserve">
+    <value>Log-Datei zurücksetzen</value>
+  </data>
+  <data name="ResetLogFile1" xml:space="preserve">
+    <value>Log-Datei zurücksetzen</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Suche</value>
+  </data>
+  <data name="Search1" xml:space="preserve">
+    <value>Suche</value>
+  </data>
+  <data name="SendLogFile" xml:space="preserve">
+    <value>Sende Protokolldatei</value>
+  </data>
+  <data name="SendLogFile1" xml:space="preserve">
+    <value>Sende Protokolldatei</value>
+  </data>
+  <data name="SettingsSyncFullViewModelSynchronizingText" xml:space="preserve">
+    <value>Synchronisieren...</value>
+  </data>
+  <data name="SettingsSyncFullViewModelSynchronizingText1" xml:space="preserve">
+    <value>Synchronisieren...</value>
+  </data>
+  <data name="SettingsSystemInfoApplicationVersionText" xml:space="preserve">
+    <value>Aurea CRM Client Version</value>
+  </data>
+  <data name="SettingsSystemInfoApplicationVersionText1" xml:space="preserve">
+    <value>Aurea CRM Client Version</value>
+  </data>
+  <data name="UnsupportedElementMessage" xml:space="preserve">
+    <value>Nicht unterstütztes Element</value>
+  </data>
+  <data name="UnsupportedElementMessage1" xml:space="preserve">
+    <value>Nicht unterstütztes Element</value>
+  </data>
+  <data name="UnsupportedViewMessage" xml:space="preserve">
+    <value>Nicht unterstützte Ansicht</value>
+  </data>
+  <data name="UnsupportedViewMessage1" xml:space="preserve">
+    <value>Nicht unterstützte Ansicht</value>
+  </data>
+  <data name="AllDay" xml:space="preserve">
+    <value>Den ganzen Tag</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Monat</value>
+  </data>
+  <data name="NoEvents" xml:space="preserve">
+    <value>Nefentes</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>Woche</value>
+  </data>
+  <data name="Workweek" xml:space="preserve">
+    <value>Arbeitswoche</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>Uur</value>
+  </data>
+  <data name="Meridiem" xml:space="preserve">
+    <value>Middag</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value>Minuut</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Jaar</value>
+  </data>
+  <data name="CalendarTitle" xml:space="preserve">
+    <value>Kalender</value>
+  </data>
+  <data name="Employees" xml:space="preserve">
+    <value>Mitarbeiter</value>
+  </data>
+  <data name="ShowLess" xml:space="preserve">
+    <value>ZEIGE WENIGER</value>
+  </data>
+  <data name="ShowMore" xml:space="preserve">
+    <value>ZEIG MEHR</value>
+  </data>
+</root>
