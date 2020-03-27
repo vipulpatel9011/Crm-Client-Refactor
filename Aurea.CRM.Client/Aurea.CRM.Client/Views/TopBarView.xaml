@@ -1,0 +1,142 @@
+﻿<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             x:Class="Aurea.CRM.Client.UI.Views.TopBarView"
+             xmlns:viewModel="clr-namespace:Aurea.CRM.Client.UI.ViewModel;assembly=Aurea.CRM.Client.UI"
+             xmlns:themes="clr-namespace:Aurea.CRM.Client.UI.Themes;assembly=Aurea.CRM.Client.UI"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"             
+             xmlns:common="clr-namespace:Aurea.CRM.Client.UI.Common;assembly=Aurea.CRM.Client.UI"
+             mc:Ignorable="d"              
+             d:DataContext="{d:DesignInstance Type=viewModel:MainPageViewModel, IsDesignTimeCreatable=True}">
+    <ContentView.Resources>
+        <ResourceDictionary>            
+            <common:BooleanNegationConverter x:Key="BooleanNegationConverter" />
+            <common:SafeAreaInsetsPaddingConverter x:Key="SafeAreaInsetsPaddingConverter" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid x:Name="grdTopBar" BackgroundColor="{StaticResource XfSystemControlBackgroundAccentBrush}"
+              IsEnabled="{Binding IsPageBusy, Converter={StaticResource BooleanNegationConverter}}"
+              HorizontalOptions="Fill"
+              VerticalOptions="Fill"
+              Padding="{Binding SafeAreaInsets,Converter={StaticResource SafeAreaInsetsPaddingConverter}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Orientation="Horizontal" Grid.Column="0">
+                <Image Source="aurea_icon.png"
+                       Margin="5"
+                       HeightRequest="30"
+                       WidthRequest="30"
+                       IsVisible="{Binding IsBackButtonVisible, Converter={StaticResource BooleanNegationConverter}}"
+                       AutomationProperties.AutomationId="AureaIcon"/>
+                <Button x:Name="BackButton"
+                        Text="{Binding BackButtonGlyphIconText}"
+                        Command="{Binding BackButtonCommand}"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start" 
+                        BackgroundColor="Transparent"
+                        FontSize="{StaticResource XfTitleTextFontSize}"
+                        FontAttributes="None"
+                        FontFamily="{StaticResource XfGlyphIconHalflings}" 
+                        TextColor="{StaticResource XfSystemControlForegroundAccentBrush}"
+                        IsVisible="{Binding IsBackButtonVisible}"
+                        AutomationProperties.AutomationId="BackButton">
+                </Button>
+                
+                <Label Text="{Binding Title, Mode=OneWay}"  
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"
+                       FontAttributes="None"
+                       FontSize="{StaticResource XfTitleTextFontSize}"
+                       TextColor="{StaticResource XfSystemControlForegroundAccentBrush}"
+                       IsVisible="{Binding IsAppTitleVisible, Mode=OneWay}"
+                        AutomationProperties.AutomationId="Title" />
+
+            </StackLayout>
+            <StackLayout x:Name="HeaderButtonsBar"                       
+                        Orientation="Horizontal"
+                        HorizontalOptions="EndAndExpand"  
+                        VerticalOptions="Center"
+                        BackgroundColor="{StaticResource XfSystemControlBackgroundAccentBrush}" 
+                        Grid.Column="1"
+                        Spacing="1"
+                        Margin="0,0,3,0">
+                <!--cogs-->
+                <Button Command="{Binding ShowLoginPopupCommand}"
+                        WidthRequest="50"
+                        BackgroundColor="Transparent"                      
+                        FontFamily="{StaticResource XfGlyphIcons}" 
+                        FontSize="{StaticResource XfTitleTextFontSize}"
+                        FontAttributes="None"
+                        TextColor="{StaticResource XfSystemControlForegroundAccentBrush}"
+                        Text="{Binding CogsIcon}"
+                        IsVisible="{Binding IsLoginPopupButtonHidden, Mode=OneWay, Converter={StaticResource BooleanNegationConverter}}"
+                        AutomationProperties.AutomationId="LoginSettingsButton" >
+                </Button>
+
+                <!--garbage collector-->
+                <Button 
+                        Command="{Binding GCCommand}"
+                        BackgroundColor="Transparent"                         
+                        Text="GC"
+                        TextColor="{StaticResource XfSystemControlForegroundAccentBrush}"
+                        FontSize="{StaticResource XfTitleTextFontSize}"
+                        FontAttributes="None"
+                        IsVisible="{Binding IsLogedIn, Mode=OneWay}"
+                        AutomationProperties.AutomationId="DashboardButton">
+                </Button>
+                
+                <!--dashboard-->
+                <Button 
+                        Command="{Binding ShowHomePageCommand}"
+                        BackgroundColor="Transparent"
+                        WidthRequest="50"                       
+                        FontFamily="{StaticResource XfGlyphIcons}" 
+                        Text="{Binding DashboardIcon}"
+                        TextColor="{StaticResource XfSystemControlForegroundAccentBrush}"
+                        FontSize="{StaticResource XfTitleTextFontSize}"
+                        FontAttributes="None"
+                        IsVisible="{Binding IsLogedIn, Mode=OneWay}"
+                        AutomationProperties.AutomationId="DashboardButton">
+                </Button>
+
+                <!--search-->
+                <Button
+                        Command="{Binding ShowSearchPageCommand}"
+                        WidthRequest="50"
+                        BackgroundColor="Transparent"                       
+                        FontFamily="{StaticResource XfGlyphIcons}" 
+                        Text="{Binding SearchIcon}"
+                        TextColor="{StaticResource XfSystemControlForegroundAccentBrush}"
+                        FontSize="{StaticResource XfTitleTextFontSize}"
+                        FontAttributes="None"
+                        IsVisible="{Binding IsLogedIn, Mode=OneWay}"
+                        AutomationProperties.AutomationId="SearchButton">
+                </Button>
+
+                <!--settings-->
+                <Grid HorizontalOptions="End">
+                <Button 
+                        Command="{Binding ShowSettingsCommand}"
+                        WidthRequest="50"
+                        BackgroundColor="Transparent"
+                        FontFamily="{StaticResource XfGlyphIcons}" 
+                        Text="{Binding SettingsIcon}"
+                        TextColor="{StaticResource XfSystemControlForegroundAccentBrush}"
+                        FontSize="{StaticResource XfTitleTextFontSize}"
+                        IsVisible="{Binding IsLogedIn, Mode=OneWay}"
+                        AutomationProperties.AutomationId="SettingsButton">
+                </Button>
+                    <Grid Margin="11,-15, 0, 0" IsVisible="{Binding HasSyncConflicts}" >
+                        <Button BorderWidth="1" Style="{StaticResource SyncCountButtonStyle}" Command="{Binding ShowSettingsCommand}" CommandParameter="SyncView" AutomationId="SyncCountButton" />
+                        <Label TextColor="{StaticResource XfLoginButtonBorderColor}" FontSize="12"  InputTransparent="True" Margin="2,1,0,0" BackgroundColor="Transparent" 
+                               Text="{Binding SyncConflictsCount}" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                    </Grid>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Aurea.CRM.Client.UI.Views;assembly=Aurea.CRM.Client.UI"             
+             xmlns:common="clr-namespace:Aurea.CRM.Client.UI.Common;assembly=Aurea.CRM.Client.UI"
+             xmlns:themes="clr-namespace:Aurea.CRM.Client.UI.Themes;assembly=Aurea.CRM.Client.UI"
+             xmlns:customControls="clr-namespace:Aurea.CRM.Client.UI.Views.CustomControls;assembly=Aurea.CRM.Client.UI"
+             x:Class="Aurea.CRM.Client.UI.Views.LoginView"
+             xmlns:topbar="clr-namespace:Aurea.CRM.Client.UI.Views"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Grid RowSpacing="0" Margin="0" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                 AbsoluteLayout.LayoutFlags="All">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />                
+                <RowDefinition Height="*" />              
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <topbar:TopBarView Grid.Row="0" />
+            <StackLayout Spacing="0" Grid.Row="1"  VerticalOptions="Fill" IsVisible="{Binding IsLoginVisible}">
+                <Grid Margin="{StaticResource XfLoginControlsMargin}" IsEnabled="{Binding IsFormEnabled}" VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="{Binding LoginControlsWidth, Mode=OneWay}" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="1" Margin="0">
+                   
+                        <Frame BackgroundColor="{StaticResource XfTransparentShadowBackgroundLogin}" OutlineColor="White" CornerRadius="3"  HeightRequest="{StaticResource XfLoginButtonHeight}"    Margin="5"  HorizontalOptions="Fill" Padding="10,7,0,0">
+                        <Grid  HorizontalOptions="FillAndExpand">
+
+                        <Label Text="{Binding SelectedServerString, Mode =OneWay}"  VerticalOptions="Center" 
+                            HeightRequest="{StaticResource XfLoginButtonHeight}"
+                            Margin="{StaticResource XfServerListComboMargin}"
+                            TextColor ="White" 
+                            VerticalTextAlignment="Center"
+                            HorizontalOptions="Start" HorizontalTextAlignment="Start" 
+                            FontSize="{StaticResource XfLoginControlsFontSize}"   />
+                         
+                        <Label Text="&#xE159;"
+                            FontFamily="{StaticResource XfGlyphIcons}"
+                            VerticalOptions="Center"
+                            HorizontalOptions="End" 
+                            TextColor ="{StaticResource XfLoginLabelFontColor}" 
+                            Margin="0,-7,20,0"
+                            FontSize="{StaticResource XfLoginControlsIconSize}"/>
+                       
+                            </Grid>
+                        </Frame>
+
+                        <Button HeightRequest="{StaticResource XfLoginButtonHeight}"
+                            VerticalOptions="Center" BackgroundColor="Transparent"
+                            HorizontalOptions="Fill"
+                            TextColor ="{StaticResource XfLoginLabelFontColor}"
+                            Command="{Binding ShowDropDownCommand}"
+                            BorderWidth="0"
+                            BorderRadius="0"
+                            Margin="0"
+                            Unfocused= "ComboBox_OnUnFocused" BorderColor="{StaticResource XfListBoxBorderThemeBrush}"
+                            AutomationProperties.AutomationId="ServersListButton" />
+                          
+                        
+                    </Grid>
+                    <Grid Grid.Row="1" Grid.Column="1">
+                        <StackLayout>
+                            <Frame BackgroundColor="{StaticResource XfTransparentShadowBackgroundLogin}" OutlineColor="White" CornerRadius="3"  HeightRequest="{StaticResource XfLoginButtonHeight}"    Margin="5"  HorizontalOptions="Fill" Padding="{StaticResource XfLoginControlsPadding}">
+                            <customControls:CustomEntry Text="{Binding UserName, Mode =TwoWay}"  VerticalOptions="Center" x:Name="UserNameEntry"
+                               Margin="0"  BackgroundColor="Transparent" FontAttributes="None"  FontSize="{StaticResource XfLoginControlsFontSize}"
+                               TextColor ="{StaticResource XfLoginLabelFontColor}" PlaceholderColor="{StaticResource XfLoginPlaceholderFontColor}"
+                               HorizontalOptions="Fill" Placeholder="{Binding TextPlaceholderUsername}" BorderWidth="0"
+                               AutomationProperties.AutomationId="UserName" />
+                            </Frame>
+                            <Frame BackgroundColor="{StaticResource XfTransparentShadowBackgroundLogin}" OutlineColor="White" CornerRadius="3"  HeightRequest="{StaticResource XfLoginButtonHeight}"    Margin="5,5,5,15"  HorizontalOptions="Fill" Padding="{StaticResource XfLoginControlsPadding}">
+                            <customControls:CustomEntry Text="{Binding Password, Mode =TwoWay}" VerticalOptions="Center" x:Name="PasswordEntry"
+                               IsPassword="True" FontAttributes="None"  FontSize="{StaticResource XfLoginControlsFontSize}"
+                               Margin="0"  BackgroundColor="Transparent"
+                               TextColor ="{StaticResource XfLoginLabelFontColor}" PlaceholderColor="{StaticResource XfLoginPlaceholderFontColor}"
+                               HorizontalOptions="Fill"  Placeholder="{Binding TextPlaceholderPassword}"  BorderWidth="0"
+                               AutomationProperties.AutomationId="Password" />
+                            </Frame>
+                            <Frame BackgroundColor="{StaticResource XfSearchFilterIconColor}" 
+                                   OutlineColor="Transparent" CornerRadius="3"  
+                                   HeightRequest="{StaticResource XfLoginButtonHeight}"    
+                                   Margin="5,5,5,15"  HorizontalOptions="Fill" Padding="0">
+                                <Grid RowSpacing="0">
+                                    <Grid RowSpacing="0" HeightRequest="{StaticResource XfLoginButtonHeightExtended}"                                       
+                                      Margin="0,0,0,0" >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="9*" />
+                                            <ColumnDefinition Width="1*" />  
+                                        </Grid.ColumnDefinitions>
+                                        <!--<StackLayout Orientation="Horizontal-->
+                                        <Label Text="{Binding TextSignIn}" FontAttributes="Bold" Grid.Column="0"
+                                               HorizontalOptions="CenterAndExpand" TextColor="{StaticResource XfLoginButtonFontColor} " 
+                                           VerticalOptions="Center" />
+                                        <ActivityIndicator VerticalOptions="Center" HorizontalOptions="End" Margin="0,0,10,0" Grid.Column="1"
+                                       IsRunning="True" IsEnabled="True" IsVisible="{Binding IsLoading}" HeightRequest="50" WidthRequest="50"
+                                           BackgroundColor="Transparent" Color="Silver"/>
+                                            <!--</StackLayout>-->
+                                        <!--<Label Text="&#xE258;" TextColor="{StaticResource XfLoginButtonBorderColor}" HorizontalOptions="Start" Grid.Column="1" 
+                                           VerticalOptions="Center"
+                                           FontFamily="{StaticResource XfGlyphIconHalflings}"
+                                           Margin="15,0,0,0"
+                                           FontAttributes="None"
+                                           FontSize="{StaticResource XfLoginControlsIconSize}"/>-->
+                                    </Grid>
+                                    <Button x:Name="LoginButton" Command="{Binding SignInCommand}" Margin="5,5,5,5"
+                                    HeightRequest="{StaticResource XfLoginButtonHeightExtended}"
+                                        BackgroundColor="Transparent" IsEnabled="{Binding IsLoading, Converter={StaticResource BooleanNegationConverter}}"
+                                    AutomationProperties.AutomationId="LoginButton"/>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                        <!--<StackLayout>
+                            <Button  Style="{StaticResource FakeClearFilterButton}"  WidthRequest="100"
+                         Margin="{StaticResource XfPopupItemsMargin}" HorizontalOptions="EndAndExpand"                      
+                         />
+
+                            <Button  Style="{StaticResource FakeClearFilterButton1}"  WidthRequest="100"
+                         Margin="{StaticResource XfPopupItemsMargin}" HorizontalOptions="EndAndExpand"                      
+                         />
+
+                            <Button  Style="{StaticResource FakeClearFilterButton2}"  WidthRequest="100"
+                         Margin="{StaticResource XfPopupItemsMargin}" HorizontalOptions="EndAndExpand"                      
+                         />
+
+                            <Button  Style="{StaticResource FakeClearFilterButton3}"  WidthRequest="100"
+                         Margin="{StaticResource XfPopupItemsMargin}" HorizontalOptions="EndAndExpand"                      
+                         />
+
+                            <Button  Style="{StaticResource FakeClearFilterButton4}"  WidthRequest="100"
+                         Margin="{StaticResource XfPopupItemsMargin}" HorizontalOptions="EndAndExpand"                      
+                         />
+                        </StackLayout>-->
+                        <ListView ItemsSource="{Binding Servers}" SelectedItem="{Binding SelectedServer}"
+                                  BackgroundColor="White" Margin="5"
+                                  IsVisible="{Binding IsSelectingServer}"
+                                  VerticalOptions="Fill" HasUnevenRows="true" AutomationProperties.AutomationId="ServersList">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <ViewCell.View>
+                                            <StackLayout BackgroundColor="White" Margin="0" VerticalOptions="FillAndExpand">
+                                                <Label Text="{Binding ServerIdentification}" Margin="10,10,10,0" TextColor="{DynamicResource XfServerListFontColor}" FontSize="{DynamicResource XfServerListFontSize}" AutomationId="ServerIdentification"/>
+                                                <Label Text="{Binding StringServerUrl}" Margin="10,0,10,10" TextColor="{DynamicResource XfServerListServerUrlFontColor}" LineBreakMode="TailTruncation" FontSize="{DynamicResource XfServerListUrlFontSize}" AutomationId="StringServerUrl"/>
+                                                <BoxView HorizontalOptions="Fill" HeightRequest="1" Margin="10,0,10,0" Color="{DynamicResource XfServerListSeparatorLineColor}"/>
+                                            </StackLayout>
+                                        </ViewCell.View>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </Grid>
+                <StackLayout VerticalOptions="End"  Spacing ="0" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Margin="0,0,0,20" >
+                    <StackLayout x:Name="InsightBoard"
+                             VerticalOptions= "EndAndExpand" 
+                             HorizontalOptions="StartAndExpand"  
+                             IsVisible="{Binding IsSelectingServer, Converter={StaticResource BooleanNegationConverter}, Mode=OneWay}"/>
+                    <Label Text="{Binding ApplicationVersion}" TextColor="{StaticResource XfApplicationVersionFontColor}" HorizontalOptions="Center" Margin="4,0,4,2" FontSize="{StaticResource XfLoginApplicationVersionFontSize}"/>
+                    <Label Text="{Binding ApplicationName, Converter= {StaticResource UpperCaseConverter}}" TextColor="{StaticResource XfApplicationNameFontColor}" HorizontalOptions="Center" Margin="4,2,4,4" FontSize="{StaticResource XfLoginApplicationNameFontSize}"/>
+                   
+                </StackLayout>
+            </StackLayout>
+           
+        </Grid>
+            <StackLayout IsVisible="{Binding IsSettingsPopupVisible}" 
+                         AbsoluteLayout.LayoutBounds="1, 0.15, 0.5, 0.4"
+                 AbsoluteLayout.LayoutFlags="All">
+                <views:LoginSettingsView HorizontalOptions="End" VerticalOptions="Start" />
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

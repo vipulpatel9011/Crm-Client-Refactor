@@ -1,0 +1,1312 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:common="clr-namespace:Aurea.CRM.Client.UI.Common;assembly=Aurea.CRM.Client.UI"
+    xmlns:customControls="clr-namespace:Aurea.CRM.Client.UI.Views.CustomControls;assembly=Aurea.CRM.Client.UI"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:local="clr-namespace:Aurea.CRM.Client.UI.Resources"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:uiControls="clr-namespace:Aurea.CRM.Client.UI.UIControls;assembly=Aurea.CRM.Client.UI"
+    xmlns:views="clr-namespace:Aurea.CRM.Client.UI.Views;assembly=Aurea.CRM.Client.UI"
+    xmlns:behaviors="clr-namespace:Aurea.CRM.Client.UI.Behaviors;assembly=Aurea.CRM.Client.UI"
+    xmlns:viewmodel ="clr-namespace:Aurea.CRM.Client.UI.ViewModel.Search;assembly=Aurea.CRM.Client.UI"
+    x:Class="Aurea.CRM.Client.UI.Themes.Styles">
+
+    <!--Converters-->
+    <!--<common:UpperCaseConverter x:Key="UpperCaseConverter"/>
+    <common:BooleanNegationConverter x:Key="BooleanNegationConverter" />
+    <common:BooleanToExpandIconConverter x:Key="BooleanToExpandIconConverter" />
+    <common:NullableBooleanConverter x:Key="NullableBooleanConverter" />
+    <common:BooleanToColorConverter x:Key="BooleanToColorConverter" />
+    <common:StringNullOrEmptyBoolConverter x:Key="StringNullOrEmptyBoolConverter" />-->
+
+    <!-- Basic Colors -->
+
+    <Color x:Key="XfMainBackColor">#f9f7f7</Color>
+    <Color x:Key="XfMainTextColor">#FF909090</Color>
+    <Color x:Key="XfMainLineColor">#FF909090</Color>
+    <Color x:Key="XfMainHeaderColor">#114f8b</Color>
+    <Color x:Key="XfSystemAccentColor">#1a75cf</Color>
+    <Color x:Key="XfSystemControlBackgroundAccentBrush">#1A75CF</Color>
+    <Color x:Key="XfSystemControlForegroundAccentBrush">#f4f7fc</Color>
+    <Color x:Key="XfSystemControlHighlightAccentBrush">#CA2026</Color>
+    <Color x:Key="XfApplicationPageBackgroundThemeBrush">#f4f7fc</Color>
+    <Color x:Key="XfListBoxBorderThemeBrush">DimGray</Color>
+    <Color x:Key="XfListBoxBackgroundThemeBrush">#f4f7fc</Color>
+    <Color x:Key="XfListBoxItemDisabledForegroundThemeBrush">Gray</Color>
+    <Color x:Key="XfTextAreaErrorBackgroundThemeBrush">#9a181d</Color>
+    <Color x:Key="XfTextAreaErrorForegroundThemeBrush">#f4f7fc</Color>
+    <Color x:Key="XfComboBoxItemSelectedBackgroundThemeBrush">#9a181d</Color>
+    <Color x:Key="XfComboBoxItemSelectedForegroundThemeBrush">#f4f7fc</Color>
+    <Color x:Key="XfComboBoxItemPointerOverBackgroundThemeBrush">#9a181d</Color>
+    <Color x:Key="XfComboBoxItemSelectedPointerOverBackgroundThemeBrush">#9a181d</Color>
+    <Color x:Key="XfTextSelectionHighlightColorThemeBrush"></Color>
+    <Color x:Key="XfTransparentShadowBackground">#7A000000</Color>
+    <Color x:Key="XfTransparentShadowBackgroundLogin">#0FFFFFFF</Color>
+    <Color x:Key="XfTransparentShadowWhiteBackground">#80FFFFFF</Color>
+    <Color x:Key="XfSearchPageBackground">#FFFFFF</Color>
+    <Color x:Key="XfSelectedTabLineColor">#1a75cf</Color>
+    <Color x:Key="XfSplitLineColor">#CACACA</Color>
+    <Color x:Key="XfEntryTextColor">Black</Color>
+    <Color x:Key="XfSearchListItemDarkColor">#45474f</Color>
+    <Color x:Key="XfSearchListItemLightColor">#909090</Color>
+    <Color x:Key="XfSearchBarIconColor">#E4E4E4</Color>
+    <Color x:Key="XfSearchFilterIconColor">#1a75cf</Color>
+    <Color x:Key="XfSearchListElementBoxColor">#EBEBEB</Color>
+    <Color x:Key="XfSearchListHeaderColor">#999999</Color>
+    <Color x:Key="XfDetailTabGroupColor">#464950</Color>
+    <Color x:Key="XfDetailTabGroupBackGroundColor">#f4f7fc</Color>
+    <Color x:Key="XfDetailTabFieldNameColor">#5d5d5d</Color>
+    <Color x:Key="XfDetailTabFieldValueColor">#1D1D26</Color>
+    <Color x:Key="XfDetailTabGroupSeparatorColor">#E04E39</Color>
+    <Color x:Key="XfDetailTabItemSeparatorColor">#E1E1E1</Color>
+    <Color x:Key="XfDetailTabLinkIconColor">#A0A0A0</Color>
+    <Color x:Key="XfSearchDetailTabPageBackground">#FFFFFF</Color>
+    <Color x:Key="XfDetailActiveTabLineColor">#1a75cf</Color>
+    <Color x:Key="XfDetailActiveTabTextColor">#000000</Color>
+    <Color x:Key="XfDetailInactiveTabColor">#909090</Color>
+    <Color x:Key="XfDetailInactiveSeparatorColor">#CBCBCB</Color>
+    <Color x:Key="XfDetailPageBackgroundColor">#FFFFFF</Color>
+    <Color x:Key="XfEditPageBackgroundColor">#FFFFFF</Color>
+    <Color x:Key="XfEditGroupTextColor">#909090</Color>
+    <Color x:Key="XfEditFieldSplitLineColor">#D0D0D0</Color>
+    <Color x:Key="XfEditFieldValueColor">#1D1D26</Color>
+    <Color x:Key="XfEditFieldNameColor">#989ba1</Color>
+    <Color x:Key="XfCustomActionButtonTextColor">#00B052</Color>
+    <Color x:Key="XfPlaceholderTextColor">#888888</Color>
+    <Color x:Key="XfLoginSplitLineColor">#F3F3F4</Color>
+    <Color x:Key="XfSyncConflictTextColor">#f4f7fc</Color>
+    <Color x:Key="XfFontTextColor">#989ba1</Color>
+    <Color x:Key="XfControlBorderColor">#e1e2e5</Color>
+    <Color x:Key="XfCalendarDayHeaderTextColor">#80838a</Color>
+
+    <!-- Insight Board -->
+
+    <Color x:Key="XfInsightBoardBackgroundColor">#f6f8fd</Color>
+    <Color x:Key="XfInsightBoardFontColor">#909090</Color>
+    <Color x:Key="XfInsightBoardIconColor">#696969</Color>
+    <OnPlatform x:Key="XfInsightBoardFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="10"></On>
+        <On Platform="WinPhone, UWP" Value="12"></On>
+        <On Platform="Android" Value="12"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfInsightBoardLabelFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="16"></On>
+        <On Platform="WinPhone, UWP" Value="20"></On>
+        <On Platform="Android" Value="20"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfInsightBoardImageSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="20"></On>
+        <On Platform="WinPhone, UWP" Value="24"></On>
+        <On Platform="Android" Value="24"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfInsightButtonImageSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="26"></On>
+        <On Platform="WinPhone, UWP" Value="30"></On>
+        <On Platform="Android" Value="30"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfDateTimeButtonImageSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="25"></On>
+        <On Platform="WinPhone, UWP" Value="25"></On>
+        <On Platform="Android" Value="25"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfInsightBoardTileHeight" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="40"></On>
+        <On Platform="WinPhone, UWP" Value="42"></On>
+        <On Platform="Android" Value="42"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfInsightBoardTileWidth" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="60"></On>
+        <On Platform="WinPhone, UWP" Value="80"></On>
+        <On Platform="Android" Value="80"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfInsightBoardLabelTextTruncationLimit" x:TypeArguments="x:Int32">
+        <On Platform="iOS" Value="20"></On>
+        <On Platform="WinPhone, UWP" Value="20"></On>
+        <On Platform="Android" Value="20"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfInsightBoardFontSizeTablet" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="12"></On>
+        <On Platform="WinPhone, UWP" Value="12"></On>
+        <On Platform="Android" Value="12"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfInsightBoardTileHeightTablet" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="65"></On>
+        <On Platform="WinPhone, UWP" Value="100"></On>
+        <On Platform="Android" Value="100"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfInsightBoardGroupHeight" x:TypeArguments="x:Int32">
+        <On Platform="iOS" Value="100"></On>
+        <On Platform="WinPhone, UWP" Value="100"></On>
+        <On Platform="Android" Value="100"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfInsightBoardItemHeightTablet" x:TypeArguments="x:Int32">
+        <On Platform="iOS" Value="80"></On>
+        <On Platform="WinPhone, UWP" Value="100"></On>
+        <On Platform="Android" Value="80"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfInsightBoardTileWidthTablet" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="130"></On>
+        <On Platform="WinPhone, UWP" Value="190"></On>
+        <On Platform="Android" Value="130"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfInsightBoardLabelTextTruncationLimitTablet" x:TypeArguments="x:Int32">
+        <On Platform="iOS" Value="40"></On>
+        <On Platform="WinPhone, UWP" Value="40"></On>
+        <On Platform="Android" Value="40"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfMoreActionsItemMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0, -1, 0, 0"></On>
+        <On Platform="WinPhone, UWP" Value="0, -5, 0, 0"></On>
+        <On Platform="Android" Value="0, -5, 0, 0"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfInsightBoardTileMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="3, 0, 3, 0"></On>
+        <On Platform="WinPhone, UWP" Value="3, 0, 3, 0"></On>
+        <On Platform="Android" Value="3, 0, 3, 0"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfInsightBoardTilePadding" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="10, 10, 10, 10"></On>
+        <On Platform="WinPhone, UWP" Value="10, 10, 10, 10"></On>
+        <On Platform="Android" Value="10, 10, 10, 10"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfInsightBoardMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0, 0, 0, 0"></On>
+        <On Platform="WinPhone, UWP" Value="10, 10, 10, 0"></On>
+        <On Platform="Android" Value="10, 10, 10, 0"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfLoginSettingsMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0,10,5,0" />
+        <On Platform="WinPhone, UWP" Value="5" />
+        <On Platform="Android" Value="5"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfLoginControlsMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="30, 0, 30, 0" />
+        <On Platform="WinPhone, UWP" Value="30, 0, 30, 0" />
+        <On Platform="Android" Value="30, 0, 30, 0"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfServerListMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="8, 0, 0, 0" />
+        <On Platform="WinPhone, UWP" Value="10, 0, 0, 0" />
+        <On Platform="Android" Value="10, 0, 0, 0"></On>
+    </OnPlatform>
+    <!-- Insight Board End -->
+
+    <!-- Header Group -->
+    <Color x:Key="XfHeaderLabelFontColor">#989ba1</Color>
+    <Color x:Key="XfHeaderSelectedLabelFontColor">#000000</Color>
+
+    <OnPlatform x:Key="XfHeaderFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="15"></On>
+        <On Platform="WinPhone, UWP" Value="15"></On>
+        <On Platform="Android" Value="15"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfActionTextFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="12"></On>
+        <On Platform="WinPhone, UWP" Value="12"></On>
+        <On Platform="Android" Value="12"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfHeaderImageSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="25"></On>
+        <On Platform="WinPhone, UWP" Value="39"></On>
+        <On Platform="Android" Value="39"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfHeaderHeight" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="50"></On>
+        <On Platform="WinPhone, UWP" Value="68"></On>
+        <On Platform="Android" Value="68"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfIconHeight" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="36"></On>
+        <On Platform="WinPhone, UWP" Value="42"></On>
+        <On Platform="Android" Value="42"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfIconCircleRadius" x:TypeArguments="x:Int32">
+        <On Platform="iOS" Value="18"></On>
+        <On Platform="WinPhone, UWP" Value="21"></On>
+        <On Platform="Android" Value="21"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfPopupNavigationHeight" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="65"></On>
+        <On Platform="WinPhone, UWP" Value="50"></On>
+        <On Platform="Android" Value="50"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfHeaderMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="5, 5, 10, 5"></On>
+        <On Platform="WinPhone, UWP" Value="10, 10, 20, 5"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfFilterParamMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="5, 5, 10, 10"></On>
+        <On Platform="WinPhone, UWP" Value="40, 10, 40, 10"></On>
+    </OnPlatform>
+
+    <!-- Settings Screen Group -->
+
+    <OnPlatform x:Key="XfShowExitButton" x:TypeArguments="x:Boolean">
+        <On Platform="iOS" Value="False" />
+        <On Platform="Android" Value="False" />
+        <On Platform="UWP" Value="True" />
+    </OnPlatform>
+
+    <Color x:Key="XfSettingsPageBackground">#FFFFFF</Color>
+    <Color x:Key="XfSettingsTabInactiveColor">#909090</Color>
+    <Color x:Key="XfSettingsTabActiveColor">#000000</Color>
+    <Color x:Key="XfSettingsTabBorderActiveColor">#1a75cf</Color>
+    <Color x:Key="XfSettingsTabBorderInactiveColor">#CACACA</Color>
+    <Color x:Key="XfSettingsSysteminfoValueColor">#1D1D26</Color>
+    <Color x:Key="XfSettingsModeOfflineColor">#240091</Color>
+    <Color x:Key="XfSettingsModeOnlineColor">#00E300</Color>
+
+    <!-- Settings Screen Group  End-->
+
+
+    <!-- Header Group End -->
+
+    <!-- Detail View Header -->
+
+    <OnPlatform x:Key="XfDetailViewHeaderCollapsedSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="30"></On>
+        <On Platform="WinPhone, UWP" Value="50"></On>
+        <On Platform="Android" Value="50"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfDetailViewHeaderNoImgeExpandedSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="70"></On>
+        <On Platform="WinPhone, UWP" Value="100"></On>
+        <On Platform="Android" Value="100"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfDetailViewHeaderExpandedSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="100"></On>
+        <On Platform="WinPhone, UWP" Value="160"></On>
+        <On Platform="Android" Value="160"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfDetailViewHeaderCollapsedFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="14"></On>
+        <On Platform="WinPhone, UWP" Value="20"></On>
+        <On Platform="Android" Value="20"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfDetailViewHeaderAdditionalTextFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="11"></On>
+        <On Platform="WinPhone, UWP" Value="16"></On>
+        <On Platform="Android" Value="16"></On>
+    </OnPlatform>
+    
+    <OnPlatform x:Key="XfDetailViewHeaderCollapsedImageSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="12"></On>
+        <On Platform="WinPhone, UWP" Value="20"></On>
+        <On Platform="Android" Value="20"></On>
+    </OnPlatform>
+
+    <Color x:Key="XfDetailViewHeaderColor">#f4f7fc</Color>
+
+    <!-- Detail View Header End -->
+
+
+    <!-- Detail Tab View Control-->
+
+    <OnPlatform x:Key="XfDetailTabHeight" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="35"></On>
+        <On Platform="WinPhone, UWP" Value="68"></On>
+        <On Platform="Android" Value="68"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfDetailTabWidth" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="130"></On>
+        <On Platform="WinPhone, UWP" Value="130"></On>
+        <On Platform="Android" Value="130"></On>
+    </OnPlatform>
+
+
+    <OnPlatform x:Key="XfGroupHeaderFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="15"></On>
+        <On Platform="WinPhone, UWP" Value="18"></On>
+        <On Platform="Android" Value="18"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfTabsFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="9"></On>
+        <On Platform="WinPhone, UWP" Value="14"></On>
+        <On Platform="Android" Value="14"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfDetailTabFieldNameFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="13"></On>
+        <On Platform="WinPhone, UWP" Value="14"></On>
+        <On Platform="Android" Value="14"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfDetailTabFieldValueFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="15"></On>
+        <On Platform="WinPhone, UWP" Value="16"></On>
+        <On Platform="Android" Value="16"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="DefaultFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="12" />
+        <On Platform="WinPhone, UWP" Value="15" />
+        <On Platform="Android" Value="15"></On>
+    </OnPlatform>
+
+    <!--<OnPlatform x:Key="XfDetailTabFieldValueFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="11"></On>
+        <On Platform="WinPhone, UWP" Value="14"></On>
+    </OnPlatform>-->
+
+    <OnPlatform x:Key="XfDetailTabLinkIconSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="15"></On>
+        <On Platform="WinPhone, UWP" Value="18"></On>
+        <On Platform="Android" Value="18"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfDetailLinkColumnWidth" x:TypeArguments="GridLength">
+        <On Platform="iOS" Value="40"></On>
+        <On Platform="WinPhone, UWP" Value="40"></On>
+        <On Platform="Android" Value="40"></On>        
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfDetailScrollBarMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0, 0, 0, 0"></On>
+        <On Platform="WinPhone, UWP" Value="0, 0, 0, 15"></On>
+        <On Platform="Android" Value="0, 0, 0, 15"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfDetailValueMarginWithNewLine" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="1, 4, 4, 34"></On>
+        <On Platform="WinPhone, UWP" Value="1, 4, 4, 34"></On>
+        <On Platform="Android" Value="1, 1, 4, 34"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfDetailValueMarginTwoColumn" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0, 0, 12, 0"></On>
+        <On Platform="WinPhone, UWP" Value="0, 0, 12, 0"></On>
+        <On Platform="Android" Value="0, 0, 12, 0"></On>
+    </OnPlatform>
+    <!-- Detail Tab View Control End-->
+
+    <!--Serial Entry -->
+    <Color x:Key="XfSerialEntryHeaderBarBackgroundColor">#464950</Color>
+    <Color x:Key="XfSerialEntryItemTextColor">#4a8be1</Color>
+    <Color x:Key="XfSerialEntryRowHeaderColor">#50535b</Color>
+    <Color x:Key="XfSerialEntrySubRowColor">#a3a5ab</Color>
+
+    <Style x:Key="SerialEntryBarHeaderItemText" TargetType="Label">
+        <Setter Property="TextColor" Value="White"/>        
+        <Setter Property="FontSize" Value="{StaticResource XfHeaderFontSize}"></Setter>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="SerialEntryBarHeaderItemValue" TargetType="Label">
+        <Setter Property="TextColor" Value="White"/>        
+        <Setter Property="FontSize" Value="{StaticResource XfHeaderFontSize}"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="SerialEntryBlueText" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource XfSerialEntryItemTextColor}"/>
+        <Setter Property="FontSize" Value="{StaticResource XfHeaderFontSize}"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="SerialEntryRowTitle" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource XfSerialEntryRowHeaderColor}"/>
+        <Setter Property="FontSize" Value="{StaticResource XfHeaderFontSize}"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="SerialEntrySubRowTitle" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource XfSerialEntrySubRowColor}"/>
+        <Setter Property="FontSize" Value="{StaticResource XfActionTextFontSize}"></Setter>        
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+    
+    <Style x:Key="SerialEntryShoppingCartButton" TargetType="Button">
+        <Setter Property="TextColor" Value="{StaticResource XfSerialEntryItemTextColor}"/>
+        <Setter Property="FontSize" Value="{StaticResource XfHeaderFontSize}"></Setter>
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="VerticalOptions" Value="Center" />        
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+    </Style>
+
+
+    <!--Serial Entry End-->
+    
+    <!-- Search List -->
+
+    <OnPlatform x:Key="XfSearchListItemHeigth" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="110"></On>
+        <On Platform="WinPhone, UWP" Value="150"></On>
+        <On Platform="Android" Value="150"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfRepSearchListItemHeigth" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="40"></On>
+        <On Platform="WinPhone, UWP" Value="50"></On>
+        <On Platform="Android" Value="50"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfSearchListRowHeigth" x:TypeArguments="x:Int32">
+        <On Platform="iOS" Value="110"></On>
+        <On Platform="WinPhone, UWP" Value="150"></On>
+        <On Platform="Android" Value="150"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfSearchListSingleRowHeigth" x:TypeArguments="x:Int32">
+        <On Platform="iOS" Value="18"></On>
+        <On Platform="WinPhone, UWP" Value="20"></On>
+        <On Platform="Android" Value="20"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfSearchListInfoAreaItemHeigth" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="50"></On>
+        <On Platform="WinPhone, UWP" Value="60"></On>
+        <On Platform="Android" Value="60"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfListResultsHeaderFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="12"></On>
+        <On Platform="WinPhone, UWP" Value="18"></On>
+        <On Platform="Android" Value="18"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfListResultsFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="12"></On>
+        <On Platform="WinPhone, UWP" Value="16"></On>
+        <On Platform="Android" Value="16"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfSearchBarFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="12"></On>
+        <On Platform="WinPhone, UWP" Value="18"></On>
+        <On Platform="Android" Value="18"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfSearchBarIconSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="20"></On>
+        <On Platform="WinPhone, UWP" Value="30"></On>
+        <On Platform="Android" Value="30"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfSearchTabTextFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="10"></On>
+        <On Platform="WinPhone, UWP" Value="12"></On>
+        <On Platform="Android" Value="12"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfSearchTextFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="12"></On>
+        <On Platform="WinPhone, UWP" Value="15"></On>
+        <On Platform="Android" Value="15"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfSearchBarFrameHeight" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="45"></On>
+        <On Platform="WinPhone, UWP" Value="60"></On>
+        <On Platform="Android" Value="60"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="EditFieldSeparatorHeight" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="1"></On>
+        <On Platform="WinPhone, UWP" Value="2"></On>
+        <On Platform="Android" Value="2"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfCalendarSegmentFont" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="11"></On>
+        <On Platform="WinPhone, UWP" Value="12"></On>
+        <On Platform="Android" Value="12"></On>
+    </OnPlatform>
+    
+    <Color x:Key="XfSearchResultItemBackgroundColor">#f4f7fc</Color>
+    <Color x:Key="XfSearchResultItemBorderColor">#e4e7ec</Color>
+
+    <!-- Search List End-->
+
+    <Color x:Key="XfListMainFontColor">Black</Color>
+    <Color x:Key="XfListBackgroundColor">#88ffffff</Color>
+
+    <OnPlatform x:Key="XfLoginBackground" x:TypeArguments="FileImageSource">
+        <On Platform="Android">login_background.png</On>
+        <On Platform="iOS">login_background.png</On>
+        <On Platform="UWP">Assets/login_background.png</On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfLoginLabelFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="16"></On>
+        <On Platform="WinPhone, UWP" Value="20"></On>
+        <On Platform="Android" Value="20"></On>
+    </OnPlatform>
+
+    <Color x:Key="XfLoginLabelFontColor">#f4f7fc</Color>
+    <Color x:Key="XfLoginPlaceholderFontColor">#CFFFFFFF</Color>
+    <Color x:Key="XfLoginButtonFontColor">#ffffff</Color>
+    <Color x:Key="XfApplicationNameFontColor">#ffffff</Color>
+    <Color x:Key="XfApplicationVersionFontColor">#ffffff</Color>
+    <Color x:Key="XfServerListServerUrlFontColor">#1D1D26</Color>
+    <Color x:Key="XfServerListSeparatorLineColor">#f4f7fc</Color>
+    <Color x:Key="XfOnlineRecordsIconColor">Gray</Color>
+    <Color x:Key="XfSearchIconColor">#E4E4E4</Color>
+    <x:Double x:Key="XfLoginButtonHeight">45</x:Double>
+    <x:Double x:Key="XfLoginButtonHeightExtended">48</x:Double>
+
+
+    <OnPlatform x:Key="XfLoginChildScrollHeight" x:TypeArguments="x:Int32">
+        <On Platform="iOS" Value="300"></On>
+        <On Platform="WinPhone, UWP" Value="300"></On>
+        <On Platform="Android" Value="300"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfExpanderAnimationTime" x:TypeArguments="x:Int32">
+        <On Platform="iOS" Value="800"></On>
+        <On Platform="WinPhone, UWP" Value="800"></On>
+        <On Platform="Android" Value="800"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfLoginButtonFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="16"></On>
+        <On Platform="WinPhone, UWP" Value="18"></On>
+        <On Platform="Android" Value="18"></On>
+    </OnPlatform>
+
+    <Color x:Key="XfLoginButtonBorderColor">#989ba1</Color>
+
+    <!--Font definition-->
+    <OnPlatform x:Key="XfGlyphIconHalflings" x:TypeArguments="x:String">
+        <On Platform="iOS" Value="GLYPHICONSHalflingsSet-Regular"></On>
+        <On Platform="WinPhone, UWP" Value="ms-appx:/Assets/fonts/GLYPHICONS-Halflings-Regular.otf#GLYPHICONS Halflings Set"></On>
+        <On Platform="Android" Value="fonts/GLYPHICONS-Halflings-Regular.otf#GLYPHICONS Halflings Set"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfGlyphIcons" x:TypeArguments="x:String">
+        <On Platform="iOS" Value="GLYPHICONS-Regular"></On>
+        <On Platform="WinPhone, UWP" Value="ms-appx:/Assets/fonts/GLYPHICONS-Regular.otf#GLYPHICONS"></On>
+        <On Platform="Android" Value="fonts/GLYPHICONS-Regular.otf#GLYPHICONS"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfTextFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="10"></On>
+        <On Platform="WinPhone, UWP" Value="16"></On>
+        <On Platform="Android" Value="16"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfRobotoRegular" x:TypeArguments="x:String">
+        <On Platform="iOS" Value="Roboto-Regular"></On>
+        <On Platform="WinPhone, UWP" Value="ms-appx:/Assets/fonts/Roboto-Regular.ttf#Roboto"></On>
+        <On Platform="Android" Value="fonts/Roboto-Regular.ttf#Roboto"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfSettingsTabFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="10"></On>
+        <On Platform="WinPhone, UWP" Value="10"></On>
+        <On Platform="Android" Value="10"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfSettingsTabIconFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="16"></On>
+        <On Platform="WinPhone, UWP" Value="17"></On>
+        <On Platform="Android" Value="17"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfSettingsTabIconCloudFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="25"></On>
+        <On Platform="WinPhone, UWP" Value="23"></On>
+        <On Platform="Android" Value="23"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfSettingsSpinnerFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="16"></On>
+        <On Platform="WinPhone, UWP" Value="16"></On>
+        <On Platform="Android" Value="16"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfSettingsButtonFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="10"></On>
+        <On Platform="WinPhone, UWP" Value="12"></On>
+        <On Platform="Android" Value="12"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfSettingsConflictsButtonFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="10"></On>
+        <On Platform="WinPhone, UWP" Value="11"></On>
+        <On Platform="Android" Value="11"></On>
+    </OnPlatform>
+
+    <!--END Font definition-->
+
+    <!-- Search tab height -->
+    <OnPlatform x:Key="XfSearchTabHeight" x:TypeArguments="GridLength">
+        <On Platform="iOS" Value="45"></On>
+        <On Platform="WinPhone, UWP" Value="70"></On>
+        <On Platform="Android" Value="70"></On>
+    </OnPlatform>
+
+    <!--Top bar font size-->
+    <OnPlatform x:Key="XfTitleTextFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="22"></On>
+        <On Platform="WinPhone, UWP" Value="20"></On>
+        <On Platform="Android" Value="20"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfPopupTitleTextFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="20"></On>
+        <On Platform="WinPhone, UWP" Value="20"></On>
+        <On Platform="Android" Value="20"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfActivityIndicatorWidth" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="100"/>
+        <On Platform="UWP" Value="400"/>
+        <On Platform="Android" Value="400"></On>
+    </OnPlatform>
+    <!--Filter Page -->
+    <OnPlatform x:Key="XfSearchBarButtonsMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="7,0,10,0"></On>
+        <On Platform="WinPhone, UWP" Value="7,0,10,0"></On>
+        <On Platform="Android" Value="7,0,10,0"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfFilterResultLabelMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="20,0,0,0"></On>
+        <On Platform="WinPhone, UWP" Value="20,0,0,0"></On>
+        <On Platform="Android" Value="20,0,0,0"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfFilterRowNameMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0,20,10,20"></On>
+        <On Platform="WinPhone, UWP" Value="0,20,10,20"></On>
+        <On Platform="Android" Value="0,20,10,20"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfFilterParamsMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="15,0,0,20"></On>
+        <On Platform="WinPhone, UWP" Value="15,0,0,20"></On>
+        <On Platform="Android" Value="15,0,0,20"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfCalSearchBarButtonsMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="5,0,5,0"></On>
+        <On Platform="WinPhone, UWP" Value="7,0,10,0"></On>
+        <On Platform="Android" Value="7,0,10,0"></On>
+    </OnPlatform>
+
+    <Style x:Key="CircleButtonStyle" TargetType="Button">
+        <Setter Property="TextColor" Value="{StaticResource XfLoginButtonBorderColor}"/>
+        <Setter Property="FontFamily" Value="{StaticResource XfGlyphIcons}"></Setter>
+        <Setter Property="HeightRequest" Value="{StaticResource XfIconHeight}"></Setter>
+        <Setter Property="WidthRequest" Value="{StaticResource XfIconHeight}" ></Setter>
+        <Setter Property="BorderColor" Value="{StaticResource XfLoginButtonBorderColor}"></Setter>
+        <Setter Property="BackgroundColor" Value="{StaticResource XfSystemControlForegroundAccentBrush}"></Setter>
+        <Setter Property="BorderWidth" Value="1.7"></Setter>
+        <Setter Property="FontSize" Value="{StaticResource XfIconCircleRadius}"></Setter>
+        <!--<Setter Property="CornerRadius" Value="16" />-->
+        <!--<Setter Property="BorderRadius" Value="21" />-->
+
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <OnPlatform x:Key="XfConflictCountButtonWidth" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="30" />
+        <On Platform="WinPhone, UWP" Value="26.5" />
+        <On Platform="Android" Value="26.5"></On>
+        
+    </OnPlatform>
+    <OnPlatform x:Key="XfConflictCountButtonHeight" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="21" />
+        <On Platform="WinPhone, UWP" Value="18.55" />
+        <On Platform="Android" Value="18.55"></On>
+    </OnPlatform>
+    <OnPlatform x:Key="XfConflictCountButtonRadius" x:TypeArguments="x:Int32">
+        <On Platform="iOS" Value="11" />
+        <On Platform="WinPhone, UWP" Value="9" />
+        <On Platform="Android" Value="9"></On>
+    </OnPlatform>
+
+    <Style x:Key="SyncCountButtonStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="#f4f7fc"></Setter>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="BorderColor" Value="#1a75cf"></Setter>
+        <Setter Property="BorderWidth" Value="1"></Setter>
+        <Setter Property="HeightRequest" Value="{StaticResource XfConflictCountButtonHeight}"></Setter>
+        <Setter Property="WidthRequest" Value="{StaticResource XfConflictCountButtonWidth}" ></Setter>
+        <Setter Property="CornerRadius" Value="{StaticResource XfConflictCountButtonRadius}" ></Setter>
+    </Style>
+
+    <Style TargetType="Label" x:Key="XfFilterButtonLabel">
+        <Setter Property="TextColor" Value="{StaticResource XfFontTextColor}"/>
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand" />        
+        <Setter Property="FontSize" Value="{StaticResource XfActionTextFontSize}" />
+    </Style>
+
+    <Style TargetType="StackLayout" x:Key="XfFilterButtonLayout">
+        <Setter Property="BackgroundColor" Value ="{StaticResource XfDetailPageBackgroundColor}" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="Spacing" Value="0" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+    </Style>
+
+    <Style TargetType="StackLayout" x:Key="XfDashboardChildLayout">
+        <Setter Property="BackgroundColor" Value ="{StaticResource XfDetailPageBackgroundColor}" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="Spacing" Value="0" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Padding" Value="0,5,0,5" />
+    </Style>
+    <!-- End Filter Page -->
+
+    <!--Application level font-->
+    <Style TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+        <Setter Property="FontAttributes" Value="None" />
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+    </Style>
+
+    <Style TargetType="Entry">
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+        <Setter Property="FontAttributes" Value="None" />
+    </Style>
+
+    <Style TargetType="customControls:CustomEntry">
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+        <Setter Property="FontAttributes" Value="None" />
+    </Style>
+
+    <Style TargetType="Button">
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+        <Setter Property="FontAttributes" Value="None" />
+    </Style>
+
+    <Style TargetType="customControls:CustomPicker">
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+    </Style>
+
+
+    <Style x:Key="LineSeparatorStyle" TargetType="BoxView">
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="HeightRequest" Value="2" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Color" Value="{StaticResource XfServerListSeparatorLineColor}" />
+    </Style>
+
+    <!--END Application level font-->
+
+    <Style TargetType="ActivityIndicator" >
+        <Setter Property="WidthRequest" Value="{StaticResource XfActivityIndicatorWidth}" />
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="HeightRequest" Value="5" />
+    </Style>
+
+    <OnPlatform x:Key="InfoAreaRowSpacing" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0,0,0,8"></On>
+        <On Platform="WinPhone, UWP" Value="0,0,0,10"></On>
+        <On Platform="Android" Value="0, 0, 0, 10"></On>
+    </OnPlatform>
+    
+    <OnPlatform x:Key="SearchGroupHeaderHeight" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="25"/>
+        <On Platform="UWP" Value="40"/>
+        <On Platform="Android" Value="40"></On>
+    </OnPlatform>
+
+    <!--END Search results item templates-->
+
+    <!-- Page Style -->
+
+    <Style x:Key="GUIPageStyle" TargetType="StackLayout">
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Margin" Value="0" />
+    </Style>
+
+    <Style x:Key="GUISearchPageStyle" TargetType="StackLayout">
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Margin" Value="0" />
+    </Style>
+
+    <!-- Edit View Control-->
+
+    <OnPlatform x:Key="XfEditGroupHeaderFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="12"></On>
+        <On Platform="WinPhone, UWP" Value="18"></On>
+        <On Platform="Android" Value="18"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfEditFieldNameFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="12"></On>
+        <On Platform="WinPhone, UWP" Value="18"></On>
+        <On Platform="Android" Value="18"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfEditFieldValueFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="10"></On>
+        <On Platform="WinPhone, UWP" Value="14"></On>
+        <On Platform="Android" Value="14"></On>        
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfEditScrollBarMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0, 0, 0, 0"></On>
+        <On Platform="WinPhone, UWP" Value="0, 0, 0, 15"></On>
+        <On Platform="Android" Value="0,0,0,15"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfEditViewGroupHeaderHeight" x:TypeArguments="GridLength">
+        <On Platform="iOS" Value="40"></On>
+        <On Platform="WinPhone, UWP" Value="50"></On>
+        <On Platform="Android" Value="50"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfCalendarGroupHeight" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="85"></On>
+        <On Platform="WinPhone, UWP" Value="200"></On>
+        <On Platform="Android" Value="200"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfCalendarGroupHeightExpanded" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="170"></On>
+        <On Platform="WinPhone, UWP" Value="200"></On>
+    </OnPlatform>
+
+
+    <OnPlatform x:Key="XfCalendarGroupHeightTablet" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="200"></On>
+        <On Platform="WinPhone, UWP" Value="200"></On>
+        <On Platform="Android" Value="200"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfCalendarDateFontSize" x:TypeArguments="x:Int32">
+        <On Platform="iOS" Value="62"></On>
+        <On Platform="WinPhone, UWP" Value="96"></On>
+        <On Platform="Android" Value="96"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfCalendarDayFontSize" x:TypeArguments="x:Int32">
+        <On Platform="iOS" Value="12"></On>
+        <On Platform="WinPhone, UWP" Value="14"></On>
+        <On Platform="Android" Value="14"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfCalendarDayMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0, 0, 0, 20"></On>
+        <On Platform="WinPhone, UWP" Value="0, 0, 0, 25"></On>
+        <On Platform="Android" Value="0,0,0,25"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfCalendarYearMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0, 0, 0, 5"></On>
+        <On Platform="WinPhone, UWP" Value="0, 0, 0, 5"></On>
+        <On Platform="Android" Value="0,0,0,5"></On>
+    </OnPlatform>
+        
+    <OnPlatform x:Key="XfCalendarGridMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="3, 0, 3, 0"></On>
+        <On Platform="WinPhone, UWP" Value="12, 10, 10, 0"></On>
+        <On Platform="Android" Value="12,10,10,0"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfListGroupMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0, 0, 0, 0"></On>
+        <On Platform="WinPhone, UWP" Value="0, 10, 0, 0"></On>
+    </OnPlatform>
+    
+    <OnPlatform x:Key="XfEditFieldHeight" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="30"></On>
+        <On Platform="WinPhone, UWP" Value="30"></On>
+        <On Platform="Android" Value="40"></On>
+    </OnPlatform>
+
+    
+    <OnPlatform x:Key="XfImageEditFieldHeight" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="100"></On>
+        <On Platform="WinPhone, UWP" Value="150"></On>
+        <On Platform="Android" Value="150"></On>
+    </OnPlatform>
+        
+    <OnPlatform x:Key="XfImageEditFramedHeight" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="110"></On>
+        <On Platform="WinPhone, UWP" Value="160"></On>
+        <On Platform="Android" Value="160"></On>
+    </OnPlatform>
+    <!-- Edit View Control End-->
+
+    <!--FieldGroupLabel style-->
+    <Style x:Key="FieldGroupLabelStyle" TargetType="Label">
+        <Setter Property="Margin" Value="10, 0, 0, 0" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+        <Setter Property="TextColor" Value="{StaticResource XfEditGroupTextColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+        <Setter Property="FontSize" Value="{StaticResource XfGroupHeaderFontSize}" />
+    </Style>
+
+    <OnPlatform x:Key="EditFieldLabelMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="15, 5, 30, 0"></On>
+        <On Platform="WinPhone, UWP" Value="15, 7, 20, 0"></On>
+        <On Platform="Android" Value="15,7,20,0"></On>
+    </OnPlatform>
+
+    <!--EditLabel style-->
+    <Style x:Key="EditFieldLabelStyle" TargetType="Label">
+        <Setter Property="Margin" Value="{StaticResource EditFieldLabelMargin}" />
+        <Setter Property="VerticalOptions" Value="Start" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+        <Setter Property="TextColor" Value="{StaticResource XfDetailTabFieldNameColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+        <Setter Property="FontSize" Value="{StaticResource XfDetailTabFieldNameFontSize}" />
+    </Style>
+
+    <OnPlatform x:Key="EditFieldMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="10, 0, 30, 0"></On>
+        <On Platform="WinPhone, UWP" Value="10, 0, 20, 0"></On>
+        <On Platform="Android" Value="10,0,20,0"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="StringEditFieldMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="10, 0, 30, 0"></On>
+        <On Platform="WinPhone, UWP" Value="10, 2, 20, 2"></On>
+        <On Platform="Android" Value="10,2,20,2"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="CustomPickerFieldMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0, 2, 0, 3"></On>
+        <On Platform="WinPhone, UWP" Value="0, 3, 0, 2"></On>
+        <On Platform="Android" Value="0,3,0,2"></On>
+    </OnPlatform>
+
+    <!--StringEditField style-->
+    <Style x:Key="StringEditFieldStyle" TargetType="customControls:CustomEntry">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="Margin" Value="{StaticResource StringEditFieldMargin}" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="BorderColor" Value="#e1e2e5" />
+        <Setter Property="TextColor" Value="{StaticResource XfEditFieldValueColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+        <Setter Property="FontSize" Value="{StaticResource XfDetailTabFieldNameFontSize}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="DateEntryFieldStyle" TargetType="customControls:CustomPickerEntry">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="Margin" Value="0,0,0,0" />
+        <Setter Property="TextColor" Value="{StaticResource XfEditFieldValueColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+        <Setter Property="FontSize" Value="{StaticResource XfDetailTabFieldNameFontSize}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="MultiStringEditFieldStyle" TargetType="customControls:CustomMultiLineEntry">
+        <Setter Property="Margin" Value="{StaticResource StringEditFieldMargin}" />
+        <Setter Property="TextColor" Value="{StaticResource XfEditFieldValueColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+        <Setter Property="FontSize" Value="{StaticResource XfDetailTabFieldNameFontSize}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="RecordLinkSelectorStyle" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="Margin" Value="{StaticResource EditFieldMargin}" />
+        <Setter Property="TextColor" Value="{StaticResource XfEditFieldValueColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+        <Setter Property="FontSize" Value="{StaticResource XfDetailTabFieldNameFontSize}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="RecordSelectorIcon" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource XfFontTextColor}" />
+        <Setter Property="Margin" Value="0,0,30,0" />
+        <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+        <Setter Property="HorizontalOptions" Value="End" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="FontSize" Value="{StaticResource XfDetailTabFieldNameFontSize}" />
+        <Setter Property="FontFamily" Value="{StaticResource XfGlyphIcons}" />
+        <Setter Property="Text" Value="&#xe028;" />
+    </Style>
+
+    <!--BooleanEditField style-->
+    <Style x:Key="BooleanEditFieldStyle" TargetType="Switch">
+        <Setter Property="Margin" Value="{StaticResource EditFieldMargin}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <!--CatalogEditField style-->
+    <Style x:Key="CatalogEditFieldStyle" TargetType="customControls:CustomPicker">
+        <Setter Property="Margin" Value="{StaticResource EditFieldMargin}" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="BorderColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{StaticResource XfEditFieldValueColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+        <Setter Property="FontSize" Value="{StaticResource XfDetailTabFieldNameFontSize}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <OnPlatform x:Key="xfDateTimeEditFieldHorizontalOptions" x:TypeArguments="LayoutOptions">
+        <On Platform="iOS" Value="FillAndExpand"></On>
+        <On Platform="WinPhone, UWP" Value="StartAndExpand"></On>
+    </OnPlatform>
+
+    <!--DateEditField style-->
+    <Style x:Key="DateEditFieldStyle" TargetType="customControls:CustomDatePicker">
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="BorderColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{StaticResource XfEditFieldValueColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+        <Setter Property="FontSize" Value="{StaticResource XfDetailTabFieldNameFontSize}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="{StaticResource xfDateTimeEditFieldHorizontalOptions}" />
+    </Style>
+
+
+    <!-- TimeEditField style-->
+    <Style x:Key="TimeEditFieldStyle" TargetType="customControls:CustomTimePicker">
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="BorderColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{StaticResource XfEditFieldValueColor}" />
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+        <Setter Property="FontSize" Value="{StaticResource XfDetailTabFieldNameFontSize}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="Grid.Column" Value="1" />
+        <Setter Property="HorizontalOptions" Value="{StaticResource xfDateTimeEditFieldHorizontalOptions}" />
+    </Style>
+
+    <OnPlatform x:Key="EditFieldSeparatorMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="30, 4, 30, 10"></On>
+        <On Platform="WinPhone, UWP" Value="20, 3, 20, 12"></On>
+        <On Platform="Android" Value="20,3,20,12"></On>
+    </OnPlatform>
+
+    <!--EditFieldSeparator style-->
+    <Style x:Key="EditFieldSeparatorStyle" TargetType="BoxView">
+        <Setter Property="HeightRequest" Value="{StaticResource EditFieldSeparatorHeight}" />
+        <Setter Property="Margin" Value="{StaticResource EditFieldSeparatorMargin}" />
+        <Setter Property="VerticalOptions" Value="Start" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="Color" Value="{StaticResource XfEditFieldSplitLineColor}" />
+    </Style>
+
+    <!--CustomButton Text FontSize-->
+    <OnPlatform x:Key="XfCustomButtonTextFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="14"></On>
+        <On Platform="WinPhone, UWP" Value="18"></On>
+        <On Platform="Android" Value="18"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="CustomActionButtonMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0, 10, 30, 15"></On>
+        <On Platform="WinPhone, UWP" Value="0, 10, 30, 10"></On>
+        <On Platform="Android" Value="0,10,30,10"></On>
+    </OnPlatform>
+
+    <!--Custom action button style-->
+
+    <Style x:Key="CustomActionButtonLabelStyle" TargetType="Label">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
+        <Setter Property="FontSize" Value="{StaticResource XfCustomButtonTextFontSize}" />
+    </Style>
+
+    <Style x:Key="CustomActionButtonIconStyle" TargetType="Label">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="FontFamily" Value="{StaticResource XfGlyphIcons}" />
+        <Setter Property="FontSize" Value="{StaticResource XfCustomButtonTextFontSize}" />
+    </Style>
+
+    <!-- Login View -->
+
+    <OnPlatform x:Key="XfLoginControlsMaximumWidth" x:TypeArguments="x:Double">
+        <On Platform="WinPhone, UWP, iOS" Value="750"></On>
+        <On Platform="Android" Value="750"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfLoginControlsFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="13"></On>
+        <On Platform="WinPhone, UWP" Value="14"></On>
+        <On Platform="Android" Value="14"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfLoginControlsIconSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="26"></On>
+        <On Platform="WinPhone, UWP" Value="26"></On>
+        <On Platform="Android" Value="26"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfLoginApplicationNameFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="11"></On>
+        <On Platform="WinPhone, UWP" Value="14"></On>
+        <On Platform="Android" Value="14"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfLoginApplicationVersionFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="11"></On>
+        <On Platform="WinPhone, UWP" Value="14"></On>
+        <On Platform="Android" Value="14"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfLoginControlsPadding" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="10, 0, 0, 0" />
+        <On Platform="WinPhone, UWP" Value="10, 7, 0, 0" />
+        <On Platform="Android" Value="10, 7, 0, 0"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfServerListComboMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0, -6, 0, 0" />
+        <On Platform="WinPhone, UWP" Value="10, -6, 0, 0" />
+        <On Platform="Android" Value="10, -6, 0, 0"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfPopupItemsMargin" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="22,19,0,0" />
+        <On Platform="WinPhone, UWP" Value="0" />
+        <On Platform="Android" Value="0"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfCatalogFieldPadding" x:TypeArguments="Thickness">
+        <On Platform="iOS" Value="0,2,0,2" />
+        <On Platform="WinPhone, UWP" Value="0,4,0,3" />
+        <On Platform="Android" Value="0, 4, 0, 3"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfRepSearchFrameHeight" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="35"></On>
+        <On Platform="WinPhone, UWP" Value="35"></On>
+        <On Platform="Android" Value="35"></On>
+    </OnPlatform>
+
+
+    <Color x:Key="XfServerListFontColor">#939393</Color>
+
+    <OnPlatform x:Key="XfServerListFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="12"></On>
+        <On Platform="WinPhone, UWP" Value="14"></On>
+        <On Platform="Android" Value="14"></On>
+    </OnPlatform>
+
+    <OnPlatform x:Key="XfServerListUrlFontSize" x:TypeArguments="x:Double">
+        <On Platform="iOS" Value="8"></On>
+        <On Platform="WinPhone, UWP" Value="10"></On>
+        <On Platform="Android" Value="10"></On>
+    </OnPlatform>
+    <!-- End Login View -->
+    <Style x:Key="FakeBackButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource XfSystemControlBackgroundAccentBrush}" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+        <Setter Property="FontSize" Value="{StaticResource XfTitleTextFontSize}" />
+        <Setter Property="TextColor" Value="{StaticResource XfSystemControlForegroundAccentBrush}" />
+        <Setter Property="Text" Value="&#xe208;" />
+        <Setter Property="FontFamily" Value="{StaticResource XfGlyphIcons}" />
+        <Setter Property="Margin" Value="30,0,30,0" />
+    </Style>
+    <Style x:Key="FakeDoneButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource XfSystemControlBackgroundAccentBrush}" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+        <Setter Property="FontSize" Value="{StaticResource XfTitleTextFontSize}" />
+        <Setter Property="TextColor" Value="{StaticResource XfSystemControlForegroundAccentBrush}" />
+        <Setter Property="Text" Value="&#xe207;" />
+        <Setter Property="FontFamily" Value="{StaticResource XfGlyphIcons}" />
+        <Setter Property="Margin" Value="30,0,30,0" />
+    </Style>
+    <Style x:Key="FakeClearFilterButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource XfSystemControlBackgroundAccentBrush}" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+        <Setter Property="FontSize" Value="{StaticResource XfTitleTextFontSize}" />
+        <Setter Property="TextColor" Value="{StaticResource XfSystemControlForegroundAccentBrush}" />
+        <Setter Property="Text" Value="&#xe267;" />
+        <Setter Property="FontFamily" Value="{StaticResource XfGlyphIconHalflings}" />
+        <Setter Property="Margin" Value="30,0,30,0" />
+    </Style>
+
+    <Style x:Key="FakeNextButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HorizontalOptions" Value="End" />
+        <Setter Property="TextColor" Value="{StaticResource XfFontTextColor}" />
+        <Setter Property="Text" Value="&#xe224;" />
+        <Setter Property="FontFamily" Value="{StaticResource XfGlyphIcons}" />
+        <Setter Property="Margin" Value="0,0,10,0" />
+    </Style>
+
+    <Style x:Key="DateButton" TargetType="Button">
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="BorderColor" Value="Transparent" />
+        <Setter Property="BackgroundColor" Value="Transparent" />        
+        <Setter Property="FontSize" Value="{StaticResource XfDateTimeButtonImageSize}" />
+        <Setter Property="TextColor" Value="{StaticResource XfMainTextColor}" />
+        <Setter Property="Text" Value="&#xe021;" />
+        <Setter Property="FontFamily" Value="{StaticResource XfGlyphIconHalflings}" />
+        <Setter Property="Margin" Value="0,0,5,0" />
+        <Setter Property="Padding" Value="-5,-10,-5,-10" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HeightRequest" Value="25" />
+        <Setter Property="WidthRequest" Value="25" />
+    </Style>
+
+    <Style x:Key="TimeButton" TargetType="Button">
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="BorderColor" Value="Transparent" />
+        <Setter Property="BackgroundColor" Value="Transparent" />        
+        <Setter Property="FontSize" Value="{StaticResource XfDateTimeButtonImageSize}" />
+        <Setter Property="TextColor" Value="{StaticResource XfMainTextColor}" />
+        <Setter Property="Text" Value="&#xe027;" />
+        <Setter Property="FontFamily" Value="{StaticResource XfGlyphIconHalflings}" />
+        <Setter Property="Margin" Value="0,0,5,0" />
+        <Setter Property="Padding" Value="-5,-10,-5,-10" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HeightRequest" Value="25" />
+        <Setter Property="WidthRequest" Value="25" />
+    </Style>
+
+    <Style x:Key="DateTimeClearButton" TargetType="Button">
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="BorderColor" Value="Transparent" />
+        <Setter Property="BackgroundColor" Value="Transparent" />        
+        <Setter Property="FontSize" Value="{StaticResource XfDateTimeButtonImageSize}" />
+        <Setter Property="TextColor" Value="{StaticResource XfFontTextColor}" />
+        <Setter Property="Text" Value="&#xe137;" />
+        <Setter Property="FontFamily" Value="{StaticResource XfGlyphIconHalflings}" />
+        <Setter Property="Padding" Value="-5,-10,-5,-10" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HeightRequest" Value="25" />
+        <Setter Property="WidthRequest" Value="25" />
+    </Style>
+    
+    <OnPlatform x:Key="PopupPadding" x:TypeArguments="x:Boolean">
+        <On Platform="iOS" Value="False"></On>
+        <On Platform="WinPhone, UWP" Value="True"></On>
+        <On Platform="Android" Value="True"></On>
+    </OnPlatform>
+  <OnPlatform x:Key="PopupHeaderPadding" x:TypeArguments="Thickness">
+    <On Platform="iOS" Value="0,10,0,0"></On>
+    <On Platform="WinPhone, UWP" Value="0,0,0,0"></On>
+    <On Platform="Android" Value="0,0,0,0"></On>
+  </OnPlatform>
+    <Style x:Key="PopupStyle" TargetType="pages:PopupPage">
+        <Setter Property="HasSystemPadding"  Value="{StaticResource PopupPadding}" />
+        <Setter Property="WidthRequest" Value="750"></Setter>
+        <Setter Property="CloseWhenBackgroundIsClicked" Value="False"></Setter>
+    </Style>
+    
+</ResourceDictionary>

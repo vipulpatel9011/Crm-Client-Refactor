@@ -1,0 +1,47 @@
+
+#Ignore thumbnails created by Windows
+Thumbs.db
+#Ignore files built by Visual Studio
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in
+[Dd]ebug*/
+*.lib
+*.sbr
+*.DS_Store
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
+.vs/
+#Nuget packages folder
+.\packages/
+.idea/*
+/Aurea.CRM.Client/Aurea.CRM.Client.UWP/AppPackages
+/Aurea.CRM.Client/Aurea.CRM.Client.UWP/BundleArtifacts
+/Aurea.CRM.Client/Aurea.CRM.Client.UWP/Aurea.CRM.Client.UWP_StoreKey.pfx
+/Aurea.CRM.Client/Aurea.CRM.Client.UWP/_pkginfo.txt
+Aurea.CRM.Client/Aurea.CRM.Client/UIComponents/Edit/GUIEditPercentageField.cs
+/packages
+/Report20200128-1806.vspx
+/Object allocation_18022020.diagsession
+/Memory allocation_18022020.diagsession
+/App_Timeline_18022020.diagsession
+/Memory allocation_1_26022020.diagsession
+/SearchPageCG_1.diagsession
+/SearchPageCG_2.diagsession

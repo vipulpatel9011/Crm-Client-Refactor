@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>	
+	<Configurations>Debug;Release;Porting</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS;SILVERLIGHT;</DefineConstants>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile>bin\Debug\Aurea.CRM.Core.XML</DocumentationFile>
+    <NoWarn>SA1629</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Porting|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS;PORTING;SqlitePCL</DefineConstants>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile></DocumentationFile>
+    <NoWarn />
+    <OutputPath>bin\Porting\</OutputPath>
+    <Optimize>false</Optimize>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;CODE_ANALYSIS;SILVERLIGHT</DefineConstants>
+    <NoWarn />
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <OutputPath>bin\Release</OutputPath>
+    <DocumentationFile>bin\Release\Aurea.CRM.Core.xml</DocumentationFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+<ItemGroup>
+    <PackageReference Include="codecracker.CSharp" Version="1.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="CommonServiceLocator" Version="2.0.4" />
+    <PackageReference Include="Jint" Version="2.11.58" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
+    <PackageReference Include="MvvmLightLibsStd10" Version="5.4.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.8.5" />
+    <PackageReference Include="SQLite.Net.Standard" Version="1.0.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Tasks.Parallel" Version="4.3.0" />
+  </ItemGroup>
+<ItemGroup>
+  <Folder Include="Properties\" />
+</ItemGroup>
+<ItemGroup>
+  <ProjectReference Include="..\Aurea.CRM.Shared\SQLitePath.csproj" />
+</ItemGroup>
+</Project>
