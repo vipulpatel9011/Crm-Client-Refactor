@@ -15,6 +15,9 @@
 //   The styles resource dictionary
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
+
+using System;
+
 namespace Aurea.CRM.Client.UI.Themes
 {
     using Xamarin.Forms;
@@ -31,7 +34,16 @@ namespace Aurea.CRM.Client.UI.Themes
         /// </summary>
         public Styles()
         {
-            this.InitializeComponent();
+            try
+            {
+                this.InitializeComponent();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
         }
     }
 }

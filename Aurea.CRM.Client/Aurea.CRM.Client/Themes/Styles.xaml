@@ -2,15 +2,6 @@
 <ResourceDictionary
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:common="clr-namespace:Aurea.CRM.Client.UI.Common;assembly=Aurea.CRM.Client.UI"
-    xmlns:customControls="clr-namespace:Aurea.CRM.Client.UI.Views.CustomControls;assembly=Aurea.CRM.Client.UI"
-    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
-    xmlns:local="clr-namespace:Aurea.CRM.Client.UI.Resources"
-    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-    xmlns:uiControls="clr-namespace:Aurea.CRM.Client.UI.UIControls;assembly=Aurea.CRM.Client.UI"
-    xmlns:views="clr-namespace:Aurea.CRM.Client.UI.Views;assembly=Aurea.CRM.Client.UI"
-    xmlns:behaviors="clr-namespace:Aurea.CRM.Client.UI.Behaviors;assembly=Aurea.CRM.Client.UI"
-    xmlns:viewmodel ="clr-namespace:Aurea.CRM.Client.UI.ViewModel.Search;assembly=Aurea.CRM.Client.UI"
     x:Class="Aurea.CRM.Client.UI.Themes.Styles">
 
     <!--Converters-->
@@ -780,19 +771,19 @@
         <Setter Property="FontAttributes" Value="None" />
     </Style>
 
-    <Style TargetType="customControls:CustomEntry">
+    <!--<Style TargetType="Entry">
         <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
         <Setter Property="FontAttributes" Value="None" />
-    </Style>
+    </Style>-->
 
     <Style TargetType="Button">
         <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
         <Setter Property="FontAttributes" Value="None" />
     </Style>
 
-    <Style TargetType="customControls:CustomPicker">
+    <!--<Style TargetType="customControls:CustomPicker">
         <Setter Property="FontFamily" Value="{StaticResource XfRobotoRegular}" />
-    </Style>
+    </Style>-->
 
 
     <Style x:Key="LineSeparatorStyle" TargetType="BoxView">
@@ -987,7 +978,7 @@
     </OnPlatform>
 
     <!--StringEditField style-->
-    <Style x:Key="StringEditFieldStyle" TargetType="customControls:CustomEntry">
+    <!--<Style x:Key="StringEditFieldStyle" TargetType="customControls:CustomEntry">
         <Setter Property="HorizontalTextAlignment" Value="Start" />
         <Setter Property="Margin" Value="{StaticResource StringEditFieldMargin}" />
         <Setter Property="BorderWidth" Value="0" />
@@ -997,9 +988,9 @@
         <Setter Property="FontSize" Value="{StaticResource XfDetailTabFieldNameFontSize}" />
         <Setter Property="VerticalOptions" Value="Center" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-    </Style>
+    </Style>-->
 
-    <Style x:Key="DateEntryFieldStyle" TargetType="customControls:CustomPickerEntry">
+    <!--<Style x:Key="DateEntryFieldStyle" TargetType="customControls:CustomPickerEntry">
         <Setter Property="HorizontalTextAlignment" Value="Start" />
         <Setter Property="Margin" Value="0,0,0,0" />
         <Setter Property="TextColor" Value="{StaticResource XfEditFieldValueColor}" />
@@ -1016,7 +1007,7 @@
         <Setter Property="FontSize" Value="{StaticResource XfDetailTabFieldNameFontSize}" />
         <Setter Property="VerticalOptions" Value="Center" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-    </Style>
+    </Style>-->
 
     <Style x:Key="RecordLinkSelectorStyle" TargetType="Label">
         <Setter Property="HorizontalTextAlignment" Value="Start" />
@@ -1047,7 +1038,7 @@
     </Style>
 
     <!--CatalogEditField style-->
-    <Style x:Key="CatalogEditFieldStyle" TargetType="customControls:CustomPicker">
+    <!--<Style x:Key="CatalogEditFieldStyle" TargetType="customControls:CustomPicker">
         <Setter Property="Margin" Value="{StaticResource EditFieldMargin}" />
         <Setter Property="BorderWidth" Value="0" />
         <Setter Property="BorderColor" Value="Transparent" />
@@ -1056,7 +1047,7 @@
         <Setter Property="FontSize" Value="{StaticResource XfDetailTabFieldNameFontSize}" />
         <Setter Property="VerticalOptions" Value="Center" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-    </Style>
+    </Style>-->
 
     <OnPlatform x:Key="xfDateTimeEditFieldHorizontalOptions" x:TypeArguments="LayoutOptions">
         <On Platform="iOS" Value="FillAndExpand"></On>
@@ -1064,7 +1055,7 @@
     </OnPlatform>
 
     <!--DateEditField style-->
-    <Style x:Key="DateEditFieldStyle" TargetType="customControls:CustomDatePicker">
+    <!--<Style x:Key="DateEditFieldStyle" TargetType="customControls:CustomDatePicker">
         <Setter Property="BorderWidth" Value="0" />
         <Setter Property="BorderColor" Value="Transparent" />
         <Setter Property="TextColor" Value="{StaticResource XfEditFieldValueColor}" />
@@ -1072,11 +1063,11 @@
         <Setter Property="FontSize" Value="{StaticResource XfDetailTabFieldNameFontSize}" />
         <Setter Property="VerticalOptions" Value="Center" />
         <Setter Property="HorizontalOptions" Value="{StaticResource xfDateTimeEditFieldHorizontalOptions}" />
-    </Style>
+    </Style>-->
 
 
     <!-- TimeEditField style-->
-    <Style x:Key="TimeEditFieldStyle" TargetType="customControls:CustomTimePicker">
+    <!--<Style x:Key="TimeEditFieldStyle" TargetType="customControls:CustomTimePicker">
         <Setter Property="BorderWidth" Value="0" />
         <Setter Property="BorderColor" Value="Transparent" />
         <Setter Property="TextColor" Value="{StaticResource XfEditFieldValueColor}" />
@@ -1085,7 +1076,7 @@
         <Setter Property="VerticalOptions" Value="Center" />
         <Setter Property="Grid.Column" Value="1" />
         <Setter Property="HorizontalOptions" Value="{StaticResource xfDateTimeEditFieldHorizontalOptions}" />
-    </Style>
+    </Style>-->
 
     <OnPlatform x:Key="EditFieldSeparatorMargin" x:TypeArguments="Thickness">
         <On Platform="iOS" Value="30, 4, 30, 10"></On>
@@ -1303,10 +1294,10 @@
     <On Platform="WinPhone, UWP" Value="0,0,0,0"></On>
     <On Platform="Android" Value="0,0,0,0"></On>
   </OnPlatform>
-    <Style x:Key="PopupStyle" TargetType="pages:PopupPage">
+    <!--<Style x:Key="PopupStyle" TargetType="pages:PopupPage">
         <Setter Property="HasSystemPadding"  Value="{StaticResource PopupPadding}" />
         <Setter Property="WidthRequest" Value="750"></Setter>
         <Setter Property="CloseWhenBackgroundIsClicked" Value="False"></Setter>
-    </Style>
+    </Style>-->
     
 </ResourceDictionary>

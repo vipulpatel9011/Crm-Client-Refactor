@@ -1,12 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="clr-namespace:Aurea.CRM.Client.UI.Views;assembly=Aurea.CRM.Client.UI"             
-             xmlns:common="clr-namespace:Aurea.CRM.Client.UI.Common;assembly=Aurea.CRM.Client.UI"
-             xmlns:themes="clr-namespace:Aurea.CRM.Client.UI.Themes;assembly=Aurea.CRM.Client.UI"
-             xmlns:customControls="clr-namespace:Aurea.CRM.Client.UI.Views.CustomControls;assembly=Aurea.CRM.Client.UI"
+             xmlns:views="clr-namespace:Aurea.CRM.Client.UI.Views;assembly=Aurea.CRM.Client.UI" 
              x:Class="Aurea.CRM.Client.UI.Views.LoginView"
              xmlns:topbar="clr-namespace:Aurea.CRM.Client.UI.Views"
+             BackgroundImage="{StaticResource XfLoginBackground}"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
         <AbsoluteLayout>
@@ -63,27 +61,24 @@
                             BorderWidth="0"
                             BorderRadius="0"
                             Margin="0"
-                            Unfocused= "ComboBox_OnUnFocused" BorderColor="{StaticResource XfListBoxBorderThemeBrush}"
-                            AutomationProperties.AutomationId="ServersListButton" />
-                          
-                        
+                            Unfocused= "ComboBox_OnUnFocused" BorderColor="{StaticResource XfListBoxBorderThemeBrush}"/>
                     </Grid>
                     <Grid Grid.Row="1" Grid.Column="1">
                         <StackLayout>
                             <Frame BackgroundColor="{StaticResource XfTransparentShadowBackgroundLogin}" OutlineColor="White" CornerRadius="3"  HeightRequest="{StaticResource XfLoginButtonHeight}"    Margin="5"  HorizontalOptions="Fill" Padding="{StaticResource XfLoginControlsPadding}">
-                            <customControls:CustomEntry Text="{Binding UserName, Mode =TwoWay}"  VerticalOptions="Center" x:Name="UserNameEntry"
+                            <Entry Text="{Binding UserName, Mode =TwoWay}"  VerticalOptions="Center" x:Name="UserNameEntry"
                                Margin="0"  BackgroundColor="Transparent" FontAttributes="None"  FontSize="{StaticResource XfLoginControlsFontSize}"
                                TextColor ="{StaticResource XfLoginLabelFontColor}" PlaceholderColor="{StaticResource XfLoginPlaceholderFontColor}"
-                               HorizontalOptions="Fill" Placeholder="{Binding TextPlaceholderUsername}" BorderWidth="0"
-                               AutomationProperties.AutomationId="UserName" />
+                               HorizontalOptions="Fill" Placeholder="{Binding TextPlaceholderUsername}"
+                               Completed="UserNameEntry_OnCompleted"/>
                             </Frame>
                             <Frame BackgroundColor="{StaticResource XfTransparentShadowBackgroundLogin}" OutlineColor="White" CornerRadius="3"  HeightRequest="{StaticResource XfLoginButtonHeight}"    Margin="5,5,5,15"  HorizontalOptions="Fill" Padding="{StaticResource XfLoginControlsPadding}">
-                            <customControls:CustomEntry Text="{Binding Password, Mode =TwoWay}" VerticalOptions="Center" x:Name="PasswordEntry"
+                            <Entry Text="{Binding Password, Mode =TwoWay}" VerticalOptions="Center" x:Name="PasswordEntry"
                                IsPassword="True" FontAttributes="None"  FontSize="{StaticResource XfLoginControlsFontSize}"
                                Margin="0"  BackgroundColor="Transparent"
                                TextColor ="{StaticResource XfLoginLabelFontColor}" PlaceholderColor="{StaticResource XfLoginPlaceholderFontColor}"
-                               HorizontalOptions="Fill"  Placeholder="{Binding TextPlaceholderPassword}"  BorderWidth="0"
-                               AutomationProperties.AutomationId="Password" />
+                               HorizontalOptions="Fill"  Placeholder="{Binding TextPlaceholderPassword}"  
+                               Completed="PasswordEntry_OnCompleted"/>
                             </Frame>
                             <Frame BackgroundColor="{StaticResource XfSearchFilterIconColor}" 
                                    OutlineColor="Transparent" CornerRadius="3"  
@@ -103,46 +98,18 @@
                                         <ActivityIndicator VerticalOptions="Center" HorizontalOptions="End" Margin="0,0,10,0" Grid.Column="1"
                                        IsRunning="True" IsEnabled="True" IsVisible="{Binding IsLoading}" HeightRequest="50" WidthRequest="50"
                                            BackgroundColor="Transparent" Color="Silver"/>
-                                            <!--</StackLayout>-->
-                                        <!--<Label Text="&#xE258;" TextColor="{StaticResource XfLoginButtonBorderColor}" HorizontalOptions="Start" Grid.Column="1" 
-                                           VerticalOptions="Center"
-                                           FontFamily="{StaticResource XfGlyphIconHalflings}"
-                                           Margin="15,0,0,0"
-                                           FontAttributes="None"
-                                           FontSize="{StaticResource XfLoginControlsIconSize}"/>-->
                                     </Grid>
                                     <Button x:Name="LoginButton" Command="{Binding SignInCommand}" Margin="5,5,5,5"
                                     HeightRequest="{StaticResource XfLoginButtonHeightExtended}"
-                                        BackgroundColor="Transparent" IsEnabled="{Binding IsLoading, Converter={StaticResource BooleanNegationConverter}}"
-                                    AutomationProperties.AutomationId="LoginButton"/>
+                                        BackgroundColor="Transparent" IsEnabled="{Binding IsLoading, Converter={StaticResource BooleanNegationConverter}}"/>
                                 </Grid>
                             </Frame>
                         </StackLayout>
-                        <!--<StackLayout>
-                            <Button  Style="{StaticResource FakeClearFilterButton}"  WidthRequest="100"
-                         Margin="{StaticResource XfPopupItemsMargin}" HorizontalOptions="EndAndExpand"                      
-                         />
-
-                            <Button  Style="{StaticResource FakeClearFilterButton1}"  WidthRequest="100"
-                         Margin="{StaticResource XfPopupItemsMargin}" HorizontalOptions="EndAndExpand"                      
-                         />
-
-                            <Button  Style="{StaticResource FakeClearFilterButton2}"  WidthRequest="100"
-                         Margin="{StaticResource XfPopupItemsMargin}" HorizontalOptions="EndAndExpand"                      
-                         />
-
-                            <Button  Style="{StaticResource FakeClearFilterButton3}"  WidthRequest="100"
-                         Margin="{StaticResource XfPopupItemsMargin}" HorizontalOptions="EndAndExpand"                      
-                         />
-
-                            <Button  Style="{StaticResource FakeClearFilterButton4}"  WidthRequest="100"
-                         Margin="{StaticResource XfPopupItemsMargin}" HorizontalOptions="EndAndExpand"                      
-                         />
-                        </StackLayout>-->
+                        
                         <ListView ItemsSource="{Binding Servers}" SelectedItem="{Binding SelectedServer}"
                                   BackgroundColor="White" Margin="5"
                                   IsVisible="{Binding IsSelectingServer}"
-                                  VerticalOptions="Fill" HasUnevenRows="true" AutomationProperties.AutomationId="ServersList">
+                                  VerticalOptions="Fill" HasUnevenRows="true">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
@@ -171,11 +138,11 @@
             </StackLayout>
            
         </Grid>
-            <StackLayout IsVisible="{Binding IsSettingsPopupVisible}" 
+            <!--<StackLayout IsVisible="{Binding IsSettingsPopupVisible}" 
                          AbsoluteLayout.LayoutBounds="1, 0.15, 0.5, 0.4"
                  AbsoluteLayout.LayoutFlags="All">
                 <views:LoginSettingsView HorizontalOptions="End" VerticalOptions="Start" />
-            </StackLayout>
+            </StackLayout>-->
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

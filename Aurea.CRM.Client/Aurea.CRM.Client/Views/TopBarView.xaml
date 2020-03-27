@@ -8,12 +8,6 @@
              xmlns:common="clr-namespace:Aurea.CRM.Client.UI.Common;assembly=Aurea.CRM.Client.UI"
              mc:Ignorable="d"              
              d:DataContext="{d:DesignInstance Type=viewModel:MainPageViewModel, IsDesignTimeCreatable=True}">
-    <ContentView.Resources>
-        <ResourceDictionary>            
-            <common:BooleanNegationConverter x:Key="BooleanNegationConverter" />
-            <common:SafeAreaInsetsPaddingConverter x:Key="SafeAreaInsetsPaddingConverter" />
-        </ResourceDictionary>
-    </ContentView.Resources>
     <ContentView.Content>
         <Grid x:Name="grdTopBar" BackgroundColor="{StaticResource XfSystemControlBackgroundAccentBrush}"
               IsEnabled="{Binding IsPageBusy, Converter={StaticResource BooleanNegationConverter}}"

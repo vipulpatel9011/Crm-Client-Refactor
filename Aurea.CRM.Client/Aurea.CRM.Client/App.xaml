@@ -10,8 +10,8 @@
             <common:BooleanNegationConverter x:Key="BooleanNegationConverter" />
             <common:BooleanToExpandIconConverter x:Key="BooleanToExpandIconConverter" />
             <common:NullableBooleanConverter x:Key="NullableBooleanConverter" />
-            <common:BooleanToColorConverter x:Key="BooleanToColorConverter" />
             <common:StringNullOrEmptyBoolConverter x:Key="StringNullOrEmptyBoolConverter" />
+            <common:SafeAreaInsetsPaddingConverter x:Key="SafeAreaInsetsPaddingConverter"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -10,9 +10,18 @@ namespace Aurea.CRM.Client
     {
         public App()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginView());
+                MainPage = new NavigationPage(new LoginView());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
         }
 
         protected override void OnStart()

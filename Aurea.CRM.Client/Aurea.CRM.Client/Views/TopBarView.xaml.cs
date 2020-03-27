@@ -35,7 +35,7 @@ namespace Aurea.CRM.Client.UI.Views
         public TopBarView()
         {
             this.InitializeComponent();
-            this.BindingContext = App.Locator.MainPageVm;
+            //this.BindingContext = App.Locator.MainPageVm;
             //grdTopBar.Padding = App.Locator.MainPageVm.SafeAreaInsets;
             //grdTopBar.On<Xamarin.Forms.PlatformConfiguration.iOS>().
         }
